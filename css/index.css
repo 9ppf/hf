@@ -1,0 +1,235 @@
+/*上部分*/
+ #top{
+	  width:80%;
+	  
+	  overflow:hidden;
+	  margin:0 auto;
+ }
+
+ /*导航栏1*/
+  #nav1{position:relative;
+        width:504px;
+	    height:66px;
+	    line-height:66px;
+		margin:0 auto;
+		margin-top:20px;
+		border:2px solid red
+   }
+  .nav1_1{height:41px;
+         width:504px;
+		 position:absolute;
+		 top:10px;
+		 right:0px;
+		 border:2px solid #9e9e9e47;
+		 background:rgba(255,255,255,0.3);
+		 border-radius:50px
+   }
+   .sou{position:absolute;
+       top:10px;
+	   right:0px;
+	   width:91px;
+	   height:41px;
+	   border:2px solid #9e9e9e47;
+	   line-height:41px;
+	   text-align:center;
+       background:#eaddcc38;
+	   border-top-right-radius:25px;
+	   border-bottom-right-radius:25px
+   }
+   .dsj{width:0px;
+        height:0px;
+        border:8px solid rgba(255,255,255,0);
+		position:absolute;
+		top:28px;
+		right:107px
+   }
+   .dsj_top{border-top:8px solid #888}
+
+ /*导航栏2*/
+  #nav2{position:relative;
+        width:100%;
+	    height:35px;
+	    line-height:35px
+  }
+  .nav2_1{position:absolute;
+		  top:0px;
+		  left:210px;
+  }
+  .nav2_1 a{margin-right:15px
+  }
+  .nav2_2{position:absolute;
+		  top:0px;
+		  right:128px;
+  }
+  .nav2_2 a{margin-left:15px
+  }
+
+ /*轮播*/
+  #lunbo{height:700px;
+         width:90%;
+		 margin:0 auto;
+         background:url("../img/top_lunbo9.jpg");
+         background-repeat:no-repeat;
+	     background-size:cover;
+		 }
+  /*右侧边栏*/
+  .right_aside1{width:40px;
+               height:1000px;
+			   border:2px solid #9e9e9e47;
+			   position:fixed;
+			   top:0px;
+			   right:0px
+			   
+   }
+  /*左侧边栏*/
+  /*左侧悬浮大背景*/
+  #left_aside{margin-left:80px;
+			  width:200px
+  }
+  #left_aside>div{border:2px solid #9e9e9e47;
+			      width:200px;
+			      height:35px;
+				  line-height:35px
+  }
+  .fenlei{text-align:center
+  }
+  .huan_q{color:white}
+  .fu{display:inline-block;
+      position:relative;
+	  text-align:center
+  }
+  .g_f{position:absolute;
+       visibility:hidden;
+       z-index: 1;
+       top: -2px;
+       left: 101%;
+   }
+  .b_f{position:absolute;
+       visibility:hidden;
+       z-index: 1;
+       top: -46px;
+       left: 101%;
+  }
+  .c_f{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top: -90px;
+    left: 101%;
+  }
+  .p_f{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top: -134px;
+    left: 101%;
+  }
+  .girls_f{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top: -178px;
+    left: 101%;
+  }
+  .lovers{position:absolute;
+     visibility:hidden;
+     z-index: 1;
+     top: -222px;
+     left: 101%;
+  }
+  .shoes{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top: -266px;
+    left: 101%;
+  }
+  .toushi{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top:-310px;
+    left: 101%;
+  }
+  .shoushi{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top:-354px;
+    left: 101%;
+  }
+  .xianglian{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top:-398px;
+    left: 101%;
+  }
+  .ershi{position:absolute;
+    visibility:hidden;
+    z-index: 1;
+    top:-442px;
+    left: 101%;
+  }
+  .qita{position:absolute;
+        visibility:hidden;
+        z-index: 1;
+        bottom:-1px;
+        left: 101%;
+  }
+  .h{width:979px;
+     height:527px;
+	 background:rgba(255,255,255,0.2);
+	 font-family:"华文彩云";
+  }
+  .fu:hover .h{visibility:visible      
+  }
+ /*左侧悬浮小背景*/
+  .huan{position:absolute;
+        top:0px;
+		left:0px;
+		z-index:1;
+        visibility:hidden;
+        width:0px;
+		height:35px;
+		background:rgba(255,255,255,0.2);
+		-webkit-transition:width 0.5s
+  } 
+  .fu:hover .huan{visibility:visible;
+                  color:red;
+				  width:202px;
+				  direction:rtl
+  }
+/*楼层*/
+ #louceng{width:90%;
+          box-sizing:border-box;
+          margin:0 auto;
+ }
+ /*一楼女装*/
+ .yilou{width:100%;
+        font-size:35px;
+        color:#f7d2a1
+ }
+ .g1>img{width:100%;
+  }
+  .g1{float:left;
+      width:20%;
+	  margin-top:10px;
+	  padding:0 8px;
+	  box-sizing:border-box;
+	  transition-property:all;
+	  transition-duration:1s;
+  } 
+  .g1:hover{outline:2px solid pink;
+            transform:scale(1.1);
+			background:rgba(255,255,255,0.5)
+  }
+  .photos{width:100%;
+          box-sizing:border-box;
+          display:flex;
+		  flex-wrap:wrap;
+		  justify-content:space-between;
+		  border:2px solid red;
+  }
+
+  .little_photo{width:20%;
+                height:60px;
+				box-sizing:border-box;
+				float:left;
+                border:1px solid red;
+  }
+  .kong{clear:both}
+ /*二楼男装*/
