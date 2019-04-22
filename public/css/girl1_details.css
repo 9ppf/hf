@@ -1,0 +1,31 @@
+/* 中间部分 */
+#middle{width:90%;
+        margin:0 auto;
+        border:2px solid red;
+}
+/* 左边图片 */
+#g_1_left{float:left;
+          border:2px solid red;
+}
+.left_photo>img{width:400px}
+.little_photos{width:400px;
+               border:2px solid red;
+               margin-top:20px;
+}
+.l_photo{width:93px;
+         margin-right:3px;
+         margin-top:2px;
+}
+.l_photo:nth-child(4){margin:0px;}
+/* 中间介绍 */
+#g_1_center{width:705px;
+            height:530px;
+            border:2px solid red;
+            float:left;
+}
+#middle:after{content:"";
+             display:block;
+             clear: both;
+
+}
+/* 右边类似 */
