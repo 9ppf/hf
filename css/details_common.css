@@ -1,0 +1,132 @@
+/* 中间部分 */
+  #middle{width:1424px;
+         margin:0 auto;
+         box-sizing:border-box;
+         padding-left:80px;
+  }
+  #middle:after{content:"";
+              display:block;
+              clear: both;
+  }
+  /* 左边图片 */
+  #g_left{float:left;
+          width:35%;
+  }
+  .left_photo>img{width:100%}
+  .little_photos{width:100%;
+               margin-top:10px;
+  }
+  .l_photo{width:23%;
+          margin-right:3px;
+  }
+  .l_photo:first-child{margin-left:5px;}
+  /* 中间介绍 */
+  #g_center{width:40%;
+             height:595px;
+             float:left;
+             padding:0px 30px;
+             border-right:2px solid #f5f5f5;
+  }
+  /* 商品价格 */
+  .price{width:100%;
+         height:100px;
+         background:#FFF2E8;
+         margin-top:10px;
+         padding:10px 20px;
+  }
+  .price div{margin-bottom:10px}
+  .mumber1{font-size:20px}
+  .mumber2{font-size:30px;
+           color:#ec5252;
+           font-weight:bold;
+  }
+  /* 运费 */
+  .yunfei{width:100%;
+          height:50px;
+          line-height:50px;
+  }
+  .yunfei span{margin-right:40px}
+  /* 销量 */
+   .count{width:100%;
+          border-top:1px solid #d0c0c05e;
+          border-bottom:1px solid #d0c0c05e;
+          height:50px;
+  }
+   .count>div{display:inline-block;
+              width:30%;
+              text-align:center;
+              border-right:1px solid #d0c0c05e;
+              margin:10px auto;
+              
+  }
+  .jifen{border:none;}
+  /* 尺寸 */
+   .size{width:100%;
+         height:50px;
+         margin:10px;
+         display:flex;
+        }
+   .size_details{width:20%;
+                 height:35px;
+                 line-height:30px;
+                 margin-left:10px;
+   }
+   .size_fenlei{width:35px;
+                height:35px;
+                border:1px solid #493f3f5e;
+                margin-left:10px;
+                text-align:center;
+                line-height:35px;
+  }
+  /* 颜色分类*/
+  .color{width:100%}
+  .yanse{width:20%;
+        margin-left:20px;
+   }
+   .color>img{width:20%;
+              margin-left:20px;
+   }
+   /* 购买数量 */
+   .count2{margin-top:10px;
+           height:50px;
+           width:100%;
+           display:flex;
+           padding:10px;
+   }
+   .count2 span{margin-left:10px;
+               
+   }
+   .buy_count input{width:40px;
+                    height:30px;
+                    margin-left:50px;
+   }
+   .jiantou>button{width:18px;
+                   height:18px;
+                   display:block;
+                   margin-left:5px;
+   }
+   .first_b{margin-top:-5px;
+            margin-right:50px;        
+   }
+   /* 购买按钮 */
+   .switch>a{float:left;
+             border:1px solid red;
+             height:50px;
+             line-height:50px;
+             text-align:center;
+             margin-top:10px;
+   }
+   .buy{width:150px;
+        margin-left:20px;
+        margin-right:10px;
+   }
+   .shopping_car{width:200px}
+  /* 右边类似 */
+  #g_right{width:25%;
+             height:595px;
+             float:left;
+  }
+  #g_right img{width:55%;
+                 margin-left:10%;
+                 margin-bottom:15px;
+  }
