@@ -16,16 +16,16 @@
 				<div class="shang">
 						<!-- 昵称-->
 						<div class="nicheng">
-								<div class="wenzi_1">昵称</div> 
-								<input type="text" class="shurukuang" id="uname" onblur="show()" placeholder="不超过10个字"><br>					
+							<div class="wenzi_1">昵称</div> 
+							<input type="text" class="shurukuang" id="uname" onblur="onblur1()" placeholder="不超过10个字" onfocus="onfocus1()"><br>
 						</div>
 						<!-- 昵称验证 -->	
 						<div id="jingshi_1">
-									<div id="jingshi1"></div>
-									<div id="jingshi2"></div>
+								<div id="jingshi1"></div>
+								 <div id="jingshi2"></div>
 						</div>
 						<script> 
-								function show(){  
+								function onblur1(){  
 									// 获取input的值
 										var uname=document.getElementById("uname");
 										var js1=document.getElementById("jingshi1");
@@ -36,12 +36,20 @@
 										}else{
 										js2.innerHTML="正确";
 										}
-							}
+							     }
+                                function onfocus1(){
+									var uname=document.getElementById("uname");
+									var js1=document.getElementById("jingshi1");
+									var js2=document.getElementById("jingshi2");
+									if (!uname.value==""){
+										js2.innerHTML="";
+									}
+								}
 						</script>
 						<!-- 密码 -->
 						<div class="mima">
 								<div class="wenzi_1">密码</div>
-								<input type="password" class="shurukuang" placeholder="由数字和字母组成，共8-10位" id="upwd" onblur="show2()"><br>
+								<input type="password" class="shurukuang" placeholder="由数字和字母组成，共8-10位" id="upwd" onblur="onbulr2()" onfocus="onfocus2()"><br>
 						</div>
 						<!-- 密码验证 -->
 						<div id="jingshi_2">
@@ -49,7 +57,7 @@
 							<div id="jingshi4"></div>
 						</div>
 						<script> 
-								function show2(){  
+								function onbulr2(){  
 									// 获取input的值
 										var upwd=document.getElementById("upwd");
 										var js3=document.getElementById("jingshi3");
@@ -58,8 +66,16 @@
 											js3.innerHTML="您输入的密码为空";
 											setTimeout(function(){jingshi3.innerHTML=""},1000);
 										}else{
-										js4.innerHTML="正确";
+										   js4.innerHTML="正确";
 										}
+								}
+								function onfocus2(){
+									var upwd=document.getElementById("upwd");
+									var js3=document.getElementById("jingshi3");
+									var js4=document.getElementById("jingshi4");
+									if (!upwd.value==""){
+										js4.innerHTML="";
+								}
 							  }
 						</script>
 				</div>
@@ -84,8 +100,7 @@
 					xhr.onreadystatechange=function(){
 						if (xhr.readyState==4&&xhr.status==200){
 							var result=xhr.responseText;
-							//console.log(result);
-							alert(result);
+							alert(result);	
 						}
 					}
 					//打开链接，创建请求
