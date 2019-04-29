@@ -1,0 +1,104 @@
+body{
+    background:url("../img/reg1.jpg") 0 0 no-repeat scroll transparent;
+    background-size:cover;
+}
+.login1{width:375px;
+       height:482px;
+       position:absolute;
+       right:171px;
+       bottom:151px;
+       border:1px solid #e8b7b738;
+       background:#e8b7b738;
+       font-family:华文行楷;
+}
+.shang{margin-top:76px}
+.nicheng{display:flex}
+.wenzi_1{text-align:center;
+         display:inline-block;
+         width:61px;
+         height:31px;
+         font-size:30px;       
+         margin-top:6px;
+}
+.shurukuang{width:278px;
+            height:45px;
+            background:#fff;
+            border-radius:9px;
+            background:#e8b7b794;
+            border:0px;
+            font-size:22px;
+            padding-left:10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+        }
+.shurukuang:-webkit-autofill { box-shadow: 0 0 0px 1000px #e8b7b785 inset !important;}
+.shurukuang::-webkit-input-placeholder{color:rgba(255,255,255,0.5);
+font-size:20px;
+}
+#jingshi1,#jingshi3{color:red;
+          width:255px;
+          height:56px;
+          font-size:20px;
+          margin-left:7px;
+          padding-top:10px;
+}
+#jingshi2,#jingshi4{color:green;
+                    width:130px;
+                    height:56px;
+                    font-size:20px;
+}
+#jingshi2 { position:absolute;
+            left:56px;
+            top:128px;
+            z-index:2;
+          }
+#jingshi4{position:absolute;
+          left:56px;
+          top:228px;
+          z-index:2;
+}
+#upwd{margin-left:-4px;}
+.check{width:23px;
+     height:23px;
+     visibility:hidden;
+}
+.check:after {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  content: " ";
+  background-image:linear-gradient(to bottom,pink,red,pink);
+  color: #fff;
+  display: inline-block;
+  visibility: visible;
+  border-radius: 7px;
+}
+.check:checked:after {
+  content: "✓";
+  font-size: 25px;
+  color:#fff;
+  text-align:center;
+  line-height:23px;
+}
+.zhong{margin:0px 11px 58px 11px;
+       display:flex;
+}
+.wenzi_2{
+             font-size:22px;
+}
+.zhong p{margin-right:13px}
+.kong{clear:both}
+.login2{width:190px;
+        height:48px;
+        margin:8px 84px;
+        background-color:#e8b7b738;
+        font-family:华文行楷;
+        font-size:42px;
+        outline:none;
+        border-radius: 20px;
+}
+ .right{position:absolute;
+        right:8%;
+         bottom:31%;
+         height:300px;
+         width:130px;
+} 
