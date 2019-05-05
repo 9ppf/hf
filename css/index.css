@@ -58,73 +58,73 @@
 
   .lovers{position:absolute;
          visibility:hidden;
-         z-index:1;
+         z-index:5;
          top:-7.3vh;
          left: 101%;
    }
   .p_f{position:absolute;
        visibility:hidden;
-       z-index: 1;
+       z-index: 5;
        top: -14.3vh;
        left: 101%;
   }
   .girls_f{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top: -21.3vh;
     left: 101%;
   }
   .g_f{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top: -28.3vh;
     left: 101%;
   }
   .b_f{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top: -35.3vh;
     left: 101%;
   }
   .c_f{position:absolute;
      visibility:hidden;
-     z-index: 1;
+     z-index: 5;
      top: -42.3vh;
      left: 101%;
   }
   .shoes{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top: -49.3vh;
     left: 101%;
   }
   .xianglian{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top:-56.3vh;
     left: 101%;
   }
   .ershi{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top:-63.3vh;
     left: 101%;
   }
   .shoushi{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top:-70.3vh;
     left: 101%;
   }
   .toushi{position:absolute;
     visibility:hidden;
-    z-index: 1;
+    z-index: 5;
     top:-77.3vh;
     left: 101%;
   }
   .qita{position:absolute;
         visibility:hidden;
-        z-index: 1;
+        z-index: 5;
         top:-84.3vh;
         left: 101%;
   }
@@ -140,18 +140,42 @@
   .fu:hover .h{visibility:visible      
   }
 
+
   /*轮播*/
   #lunbo{height:90.5vh;
-         width:69vw;
+         width:68vw;
          background-repeat:no-repeat;
 	       background-size:cover;
          position:relative;
      }
+  /* 包含图片的div */
+  #lunbo>div{display:flex;
+             overflow: hidden;
+             z-index: 1;
+  }
+  /* 轮播图的图片 */
   #lunbo img{width:68vw;
              height:90.5vh;
-             position:absolute;
-             left:-1.8vw;
   }
+  /* 指示符的父元素 */
+  #lunbo>.buttons{
+    position: absolute;
+    bottom:20px;
+    z-index: 2;
+    margin-left:15vw
+  }
+  /* 指示符 */
+  .buttons>div{
+    width:2vw;
+    height:4vh;
+    margin:5vh;
+    border-radius: 50%;
+    text-align: center;
+    padding:0.5vh;
+    background:#fff;
+  }
+
+  
  /*右侧边栏*/
   /* 右侧边栏最大父元素*/
   .right_aside1{width:2.5vw;
@@ -169,7 +193,7 @@
    /* 包含图片的div */
    .photo_r{width:1.5vw;
             height:3.2vh;
-            background:url("../img/index_side_right.png") #d99f94;
+            background:url("../img/index_side_right.png") #ff5000;
             background-repeat:no-repeat;
             background-size:cover;
             position: relative;
@@ -182,7 +206,7 @@
              top:0vh;
              left:0vw;
              z-index: 2;
-             background:#fff;
+             background:#f5f5f5;
 
     }
     /* 图片下的文字*/
@@ -191,9 +215,12 @@
            right:-5vw;
            top:0.1vh;
            font-size:2vh;
-           background:#d99f94;
+           color:#fff;
+           background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
            transition:1s;
            z-index: -1;
+           border-top-left-radius: 5px;
+           border-bottom-left-radius: 5px;
     }
     .w_f:hover .wenzi{visibility: visible;
                       transform: translateX(-6.8vw);
@@ -239,6 +266,9 @@
           bottom:18vh;
           left:0.4vw;
   }
+
+
+
 /*楼层*/
  #louceng{width:90%;
           box-sizing:border-box;
@@ -260,7 +290,8 @@
 	  margin:10px 8px;
 	  box-sizing:border-box;
 	  transition-property:all;
-	  transition-duration:1s;
+    transition-duration:1s;
+    position: relative;
   } 
   .g1:hover,.b1:hover,.c1:hover{
       border:2px solid #d99f94;
@@ -268,6 +299,25 @@
 			background:rgba(255,255,255,0.5);
 			box-sizing:border-box;
 			border-radius:5px;	
+  }
+  /* 遮罩 */
+  .zhezhao1,.zhezhao2{width:50%;
+                      height:54.8vh;
+                      background: rgba(25,25,25,0.2);
+                      
+  }
+  .zhezhao1{position: absolute;
+            top:0vh;
+            left:50%;
+            visibility: hidden;
+  } 
+  .zhezhao2{position: absolute;
+            top:0vh;
+            right:50%;
+            visibility: hidden;}       
+  .g1:hover .zhezhao1,.g1:hover .zhezhao2{visibility: visible;
+                                          width: 0%;
+                                          transition: width 2s;
   }
   /* 包括小照片的样式 */
   .photos{width:100%;
@@ -290,10 +340,13 @@
          margin-left:5px;
   }
   .baoyou{display:inline-block;
-          width:2vw;
-          height:2vh;
+          width:2.5vw;
+          height:3vh;
           background-color:#F40;
           color:#fff;
           font-size:2vh;
+          text-align: center;
   }
- /*二楼男装*/
+  .particulars:hover{color:#F40}
+
+  /* 尾部 */
