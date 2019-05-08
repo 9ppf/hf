@@ -9,7 +9,7 @@
               clear: both;
   }
   /* 左边图片 */
-  #g_left{float:left;
+  #g_1_left{float:left;
           width:35%;
   }
   .left_photo>img{width:100%}
@@ -21,7 +21,7 @@
   }
   .l_photo:first-child{margin-left:5px;}
   /* 中间介绍 */
-  #g_center{width:40%;
+  #g_1_center{width:40%;
              height:595px;
              float:left;
              padding:0px 30px;
@@ -93,16 +93,21 @@
            display:flex;
            padding:10px;
    }
-   .count2 span{margin:0px 20px 0px 10px}
-   .buy_count{ display:block;}
+   .count2 span{margin-left:10px;
+               
+   }
    .buy_count input{width:40px;
                     height:30px;
+                    margin-left:50px;
    }
-   .buy_count>button{width:2vw;
-                      height:2vw;                
+   .jiantou>button{width:18px;
+                   height:18px;
+                   display:block;
+                   margin-left:5px;
    }
-   .first_b{margin-top:-5px;}
-   .surplus{margin-left:2vw;}
+   .first_b{margin-top:-5px;
+            margin-right:50px;        
+   }
    /* 购买按钮 */
    .switch>a{float:left;
              border:1px solid red;
@@ -117,11 +122,11 @@
    }
    .shopping_car{width:200px}
   /* 右边类似 */
-  #g_right{width:25%;
+  #g_1_right{width:25%;
              height:595px;
              float:left;
   }
-  #g_right img{width:55%;
+  #g_1_right img{width:55%;
                  margin-left:10%;
                  margin-bottom:15px;
   }
