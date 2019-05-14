@@ -8,7 +8,8 @@
   <meta name="Description" content="">
   <title>Document</title>
    <link rel="stylesheet" href="../css/common.css">
-   <link rel="stylesheet" href="../css/reg.css">
+	 <link rel="stylesheet" href="../css/reg.css">
+	 <script src="../js/yanzheng.js"></script>
  </head>
  <body>
 	  <div class="zong">
@@ -18,207 +19,73 @@
 	          <div id="touxiang">
 	            <div class="title">美丽汉服注册</div>
 						</div>
+
 					<!-- 昵称 -->
 						<div class="nicheng">
 							<div>昵称：</div>
-							<input type="text" id="uname" class="srk" onblur="onblur_nc()" onfocus="onfocus_nc()" placeholder="请输入昵称">
+							<input type="text" id="uname" class="srk" placeholder="请输入昵称" onblur="javascript:nicheng();" onfocus="javascript:nicheng();">
 						</div>
 						<!-- 昵称验证 -->
             <div id="jingshi">
-								<div id="jingshin_1" class="jingshi1"></div>
-								<div id="jingshin_2" class="jingshi2"></div>
+								<div id="jingshi1"></div>
 						</div>
-						<script>
-						     var uname=document.getElementById("uname");
-							   var js1=document.getElementById("jingshin_1");
-								 var js2=document.getElementById("jingshin_2");
-								 function onblur_nc(){		
-										if(uname.value==""){
-											js1.innerHTML="您输入的昵称为空";
-											setTimeout(function(){jingshin_1.innerHTML=""},1000);
-										}else{
-										js2.innerHTML="正确";
-										}
-								 } 
-								function onfocus_nc(){
-										if (!uname.value==""){
-											 js2.innerHTML="";
-										}
-								}      
-						</script>
+
 				  <!-- 密码 -->
 						<div>
 							<div>密码：</div>	
-							<input type="text" id="upwd" class="srk" onblur="onblur_mm()" onfocus="onfocus_mm()">
+							<input type="text" id="upwd" class="srk" onblur="javascript:mima();" onfocus="javascript:mima();">
 						</div>
 						<!-- 密码验证 -->
 						<div id="jingshi">
-								<div id="jingshim_1" class="jingshi1"></div>
-								<div id="jingshim_2" class="jingshi2"></div>
+								<div id="jingshi2"></div>
 						</div>
-						<script>
-						    var upwd=document.getElementById("upwd");
-								var js_1m=document.getElementById("jingshim_1");
-								var js_2m=document.getElementById("jingshim_2");	
-								function onblur_mm(){										
-										if(upwd.value==""){
-											js_1m.innerHTML="您输入的密码为空";
-											setTimeout(function(){jingshim_1.innerHTML=""},1000);
-										}else{
-										  js_2m.innerHTML="正确";
-										}
-								} 
-								function onfocus_mm(){
-									  setTimeout(function(){jingshin_2.innerHTML=""},0.01);
-										if (!upwd.value==""){
-											js_2m.innerHTML="";
-										}
-								}        
-						</script>
+
 					<!-- 邮箱 -->
 						<div>
 							 <div>邮箱：</div>
-							 <input type="text" id="email" class="srk" onfocus="onfocus_yx()" onblur="onblur_yx()">
+							 <input type="text" id="email" class="srk" onfocus="javascript:youxiang();" onblur="javascript:youxiang();">
 						</div>
 						<!-- 邮箱验证 -->
 						<div id="jingshi">
-								<div id="jingshiy_1" class="jingshi1"></div>
-								<div id="jingshiy_2" class="jingshi2"></div>
+								<div id="jingshi3"></div>
 						</div>
-						<script>
-						    var email=document.getElementById("email");
-								var js_1y=document.getElementById("jingshiy_1");
-								var js_2y=document.getElementById("jingshiy_2");	
-								function onblur_yx(){										
-										if(email.value==""){
-											js_1y.innerHTML="您输入的密码为空";
-											setTimeout(function(){jingshiy_1.innerHTML=""},1000);
-										}else{
-										  js_2y.innerHTML="正确";
-										}
-								}
-								function onfocus_yx(){
-									  setTimeout(function(){jingshim_2.innerHTML=""},0.001);
-										if (!email.value==""){
-											js_2y.innerHTML="";
-										}
-								}      
-						</script>
+
 					<!-- 手机号 -->
 						<div>
 						   <div>手机：</div>
-							 <input type="text" id="phone" class="srk" onblur="onblur_ph()" onfocus="onfocus_ph()">
+							 <input type="text" id="phone" class="srk" onblur="javascript:phone();" onfocus="javascript:phone();">
 						</div>
 					<!-- 手机号验证 -->
 					  <div id="jingshi">
-							 <div id="jingshiph_1" class="jingshi1"></div>
-							 <div id="jingshiph_2" class="jingshi2"></div>
+							 <div id="jingshi4"></div>
 						</div>
-            <script>
-						    var phone=document.getElementById("phone");
-								var js_1ph=document.getElementById("jingshiph_1");
-								var js_2ph=document.getElementById("jingshiph_2");	
-								function onblur_ph(){										
-										if(phone.value==""){
-											js_1ph.innerHTML="您输入的密码为空";
-											setTimeout(function(){jingshiph_1.innerHTML=""},1000);
-										}else{
-										  js_2ph.innerHTML="正确";
-										}
-								}
-								function onfocus_ph(){
-									  setTimeout(function(){jingshiph_2.innerHTML=""},0.001);
-										if (!phone.value==""){
-											js_2.innerHTML="";
-										}
-								}      
-						</script>
+ 
 					<!--真实姓名 -->
 						<div>
 							<div>姓名：</div>	
-							<input type="text" id="user_name" class="srk" onblur="onblur_un()" onfocus="onfocus_un()">
+							<input type="text" id="user_name" class="srk" onblur="javascript:user_name();" onfocus="javascript:user_name();">
 						</div>
 						<!-- 真实姓名验证 -->
 						<div id="jingshi">
-								<div id="jingshiun_1" class="jingshi1"></div>
-								<div id="jingshiun_2" class="jingshi2"></div>
+								<div id="jingshi5"></div>
 						</div>
-						<script>
-						    var user_name=document.getElementById("user_name");
-								var js_1un=document.getElementById("jingshiun_1");
-								var js_2un=document.getElementById("jingshiun_2");	
-								function onblur_un(){										
-										if(user_name.value==""){
-											js_1un.innerHTML="您输入的密码为空";
-											setTimeout(function(){jingshiun_1.innerHTML=""},1000);
-										}else{
-										  js_2un.innerHTML="正确";
-										}
-								}
-								function onfocus_un(){
-									  setTimeout(function(){jingshiun_2.innerHTML=""},0.001);
-										if (!user_name.value==""){
-											js_2un.innerHTML="";
-										}
-								}      
-						</script>
-				  <!-- 性别 -->
-						<div>
-							<div>性别：</div>							
-							<input type="text" id="gender" class="srk" onfocus="onfocus_d()" onblur="onblur_d()">
-						</div>
-					<!-- 性别的验证 -->
-						<div id="jingshi">
-								<div class="jingshi_gender"></div>
-						</div>
-						<script>
-						    var email=document.getElementById("email");
-								var js_1y=document.getElementById("jingshiy_1");
-								var js_2y=document.getElementById("jingshiy_2");	
-								function onblur_yx(){										
-										if(email.value==""){
-											js_1y.innerHTML="您输入的密码为空";
-											setTimeout(function(){jingshiy_1.innerHTML=""},1000);
-										}else{
-										  js_2y.innerHTML="正确";
-										}
-								}
-								function onfocus_yx(){
-									  setTimeout(function(){jingshiy_2.innerHTML=""},0.001);
-										if (!email.value==""){
-											js_2y.innerHTML="";
-										}
-								}      
-						</script>
+				
 					<!-- 生日 -->
 						<div>
 							<div>生日：</div>
-							<input type="text" id="birthday" class="srk" onblur="onblur_bir()" onfocus="onfocus_bir()">
+							<input type="text" id="birthday" class="srk" onblur="javascript:birthday()" onfocus="javascript:birthday()">
 						</div>
 						<!-- 生日验证 -->
 						<div id="jingshi">
-								<div id="jingshibir_1" class="jingshi1"></div>
-								<div id="jingshibir_2" class="jingshi2"></div>
+								<div id="jingshi6"></div>
+						</div>								
+				  <!-- 性别 -->
+					<div class="gender">
+							<div>性别：</div>							
+							<input type="radio" name="sex" id="gender1">男
+							<input type="radio" name="sex" id="gender2">女
+							<input type="radio" name="sex" id="gender3">不透露
 						</div>
-						<script>
-						    var birthday=document.getElementById("birthday");
-								var js_1bir=document.getElementById("jingshibir_1");
-								var js_2bir=document.getElementById("jingshibir_2");	
-								function onblur_bir(){										
-										if(birthday.value==""){
-											js_1bir.innerHTML="您输入的密码为空";
-											setTimeout(function(){jingshibir_1.innerHTML=""},1000);
-										}else{
-										  js_2bir.innerHTML="正确";
-										}
-								}
-								function onfocus_bir(){
-									  setTimeout(function(){jingshibir_2.innerHTML=""},0.001);
-										if (!birthday.value==""){
-											js_2bir.innerHTML="";
-										}
-								}      
-						</script>
 					<!--提交按钮  -->
 	          <button class="reg2">注册</button>
         </div>
