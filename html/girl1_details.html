@@ -319,21 +319,14 @@
 				<div><a href="javascript:;">回答</a></div>
 				<div><a href="javascript:;">售后保障</a></div>
 			</div>
-			<div class="hidden">
-				<div><a href="javascript:;">商品详情</a></div>
-				<div><a href="javascript:;">包装及参数</a></div>
-				<div><a href="javascript:;">评价</a></div>
-				<div><a href="javascript:;">回答</a></div>
-				<div><a href="javascript:;">售后保障</a></div>
-			</div>
 			<script>
 					(function () {
 						var h1 = $(".shang").height();
 						$(window).scroll(function () {
 							if ($(window).scrollTop() > h1) {
-								$(".hidden").css("display", "block")
+								$(".x_title").addClass("flex")
 							} else {
-								$(".hidden").css("display", "none")
+								$(".x_title").removeClass("flex")
 							}
 						}).trigger("scroll")
 					})()
@@ -365,171 +358,185 @@
 					<img src="../img/girl1_10.jpg" alt="">
 					<img src="../img/girl1_11.jpg" alt="">
 				</div>
-				<!-- 尾部售后保障 -->
-			<div class="bottom_sell">
-					<div>售后服务</div>
-					<div></div>
-					<div>
-					  售后内容<span>7支持天无理由退换</span>
-					</div>
-					<div>
-					 <span>退货流程</span>
-					 <span>退货细则</span>
-				   </div>
-					 <div></div>
-					 <img src="../img/tuihuo.jpg" alt="">
-				 </div>
-			</div>
-			<!-- 包装及参数 -->
-			<div class="pack">
-               <table cellspacing="0" cellpadding="0">
-				   <tr>
-					   <td colspan="2"><b>主观参数</b></td>
-				   </tr>
-				   <tr>
-					   <td class="first_child">品牌</td>
-					   <td class="second">悦洛秀</td>
-				   </tr>
-				   <tr>
-					   <td>货号</td>
-					   <td>88878</td>
-				   </tr>
-				   <tr>
-					   <td>上市时间</td>
-					   <td>2018年夏季</td>
-				   </tr>
-				   <tr>
-					   <td>适用季节</td>
-					   <td>夏季</td>
-				   </tr>
-				   <tr>
-					   <td>适用人群</td>
-					   <td>女士</td>
-				   </tr>
-				   <tr>
-					   <td>适用场景</td>
-					   <td>日常</td>
-				   </tr>
-				   <tr>
-					   <td>基础风格</td>
-					   <td>其他</td>
-				   </tr>
-				   <tr>
-					   <td colspan="2"><b>细节参数</b></td>
-				   </tr>
-				   <tr>
-					   <td>面料主材质</td>
-					   <td>棉</td>
-				   </tr>
-				   <tr>
-					   <td>服装版型</td>
-					   <td>宽松</td>
-				   </tr>
-				   <tr>
-					   <td>厚薄</td>
-					   <td>加绒</td>
-				   </tr>
-				   <tr>
-					   <td>领型</td>
-					   <td>其它领型</td>
-				   </tr>
-				   <tr>
-					   <td>图案</td>
-					   <td>纯色</td>
-				   </tr>
-				   <tr>
-					   <td>袖型</td>
-					   <td>其他</td>
-				   </tr>
-				   <tr>
-					   <td>袖长</td>
-					   <td>九分袖</td>
-				   </tr>
-				   <tr>
-					   <td>衣门襟</td>
-					   <td>拉链</td>
-				   </tr>
-				   <tr>
-					   <td>组合形式</td>
-					   <td>两件套</td>
-				   </tr>
-				   <tr>
-					   <td>款式</td>
-					   <td>吊带</td>
-				   </tr>
-				   <tr>
-					   <td>腰型</td>
-					   <td>松紧腰</td>
-				   </tr>
-				   <tr>
-					   <td>适用年龄</td>
-					   <td>18-24周岁</td>
-				   </tr>
-				   <tr>
-					   <td>裙长</td>
-					   <td>长裙</td>
-				   </tr>
-				   <tr>
-					   <td>裙型</td>
-					   <td>其他</td>
-				   </tr>
-			   </table>
-			</div>
-			<!-- 评价 -->
-			<div class="evaluate">
-                <div>	
-					<div>100% 好评率</div>
-					<div>大家印象</div>
-					<div>图案不错(1)</div>
-					<div>穿上很舒服(1)</div>
-					<div>大小合适(1)</div>
-					<div>面料不错(1)</div>
+				
+			   <!-- 包装及参数 -->
+				<div class="pack">
+				<table cellspacing="0" cellpadding="0">
+					<tr>
+						<td colspan="2"><b>主观参数</b></td>
+					</tr>
+					<tr>
+						<td class="first_child">品牌</td>
+						<td class="second">悦洛秀</td>
+					</tr>
+					<tr>
+						<td>货号</td>
+						<td>88878</td>
+					</tr>
+					<tr>
+						<td>上市时间</td>
+						<td>2018年夏季</td>
+					</tr>
+					<tr>
+						<td>适用季节</td>
+						<td>夏季</td>
+					</tr>
+					<tr>
+						<td>适用人群</td>
+						<td>女士</td>
+					</tr>
+					<tr>
+						<td>适用场景</td>
+						<td>日常</td>
+					</tr>
+					<tr>
+						<td>基础风格</td>
+						<td>其他</td>
+					</tr>
+					<tr>
+						<td colspan="2"><b>细节参数</b></td>
+					</tr>
+					<tr>
+						<td>面料主材质</td>
+						<td>棉</td>
+					</tr>
+					<tr>
+						<td>服装版型</td>
+						<td>宽松</td>
+					</tr>
+					<tr>
+						<td>厚薄</td>
+						<td>加绒</td>
+					</tr>
+					<tr>
+						<td>领型</td>
+						<td>其它领型</td>
+					</tr>
+					<tr>
+						<td>图案</td>
+						<td>纯色</td>
+					</tr>
+					<tr>
+						<td>袖型</td>
+						<td>其他</td>
+					</tr>
+					<tr>
+						<td>袖长</td>
+						<td>九分袖</td>
+					</tr>
+					<tr>
+						<td>衣门襟</td>
+						<td>拉链</td>
+					</tr>
+					<tr>
+						<td>组合形式</td>
+						<td>两件套</td>
+					</tr>
+					<tr>
+						<td>款式</td>
+						<td>吊带</td>
+					</tr>
+					<tr>
+						<td>腰型</td>
+						<td>松紧腰</td>
+					</tr>
+					<tr>
+						<td>适用年龄</td>
+						<td>18-24周岁</td>
+					</tr>
+					<tr>
+						<td>裙长</td>
+						<td>长裙</td>
+					</tr>
+					<tr>
+						<td>裙型</td>
+						<td>其他</td>
+					</tr>
+				</table>
 				</div>
-				<div>
-					<div>
-						<div>全部</div>
-						<div>最新</div>
-						<div>有图评价</div>
-						<div>好评</div>
-						<div>中评</div>
-						<div>差评</div>
-						<div>追评</div>
-					</div>
-					<div>
-						<div>评价商品筛选</div>
-						<div>全部</div>
-						<div><input type="checkbox"></div>
-						<div>趣评模式</div>
-						<div>(介绍)</div>
-					</div>
-					<div>
-						<div>头像</div>
+				<!-- 评价 -->
+				<div class="evaluate">
+					<div class="evaluate_total">	
 						<div>
-							<div>五角星</div>
+						  <div>100%</div>
+						  <div>好评率</div>
+						</div>
+						<div>
+							<span>|</span>
+							<span>大家印象</span>
+							<span>|</span>
+						</div>
+						<div>图案不错(1)</div>
+						<div>穿上很舒服(1)</div>
+						<div>大小合适(1)</div>
+						<div>面料不错(1)</div>
+					</div>
+					<div class="evaluate_f">
+						<div>
+							<div>全部</div>
+							<div>最新</div>
+							<div>有图评价</div>
+							<div>好评</div>
+							<div>中评</div>
+							<div>差评</div>
+							<div>追评</div>
+						</div>
+						<div>
+							<div>评价商品筛选:</div>
+							<div><button>全部</button></div>
+							<div><input type="checkbox"></div>
+							<div>趣评模式</div>
+							<div>(介绍)</div>
+						</div>
+						<div>
+							<div><img src="../icon/touxiang.jpg" alt=""></div>
 							<div>
-								<div>面料不错</div>
-								<div>大小合适</div>
-								<div>图案不错</div>
-								<div>穿上很舒服</div>
+								<div  class="use_star">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>	
+								<div class="use_eva">
+									<div>面料不错</div>
+									<div>大小合适</div>
+									<div>图案不错</div>
+									<div>穿上很舒服</div>
+								</div>
+								<div class="use_time">
+									<div>评价内容</div>
+								  <div>评价时间</div>
+							  </div>	
 							</div>
-							<div>评价内容</div>
-							<div>评价时间</div>
-						</div>
-						<div>
-							<button><a href="javascript:;">无用</a></button>
-							<button><a href="javascript:;">有用</a></button>
+							<div class="sub">
+								<button><a href="javascript:;">无用</a></button>
+								<button><a href="javascript:;">有用</a></button>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- 回答 -->
-			<div class="anser">
-
-			</div>
-			<!-- 售后保障-->
-			<div class="sell_after">
-
-			</div>
+				<!-- 回答 -->
+				<div class="anser">
+				</div>
+				<!-- 售后保障 -->
+			    <div class="bottom_sell">
+						<div>售后保障</div>
+						<div>售后服务</div>
+						<hr>
+						<div>
+						  售后内容<span>7支持天无理由退换</span>
+						</div>
+						<div>
+						 <span>退货流程</span>
+						 <span>退货细则及服务</span>
+						</div>
+						<hr>
+						<div>
+						  <img src="../img/tuihuo.jpg" alt="">
+						</div>
+				</div>
+		   </div>
 		</div>
 	</div>
 </body>
