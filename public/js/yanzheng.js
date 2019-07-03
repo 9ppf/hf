@@ -126,7 +126,7 @@ function birthday(){
                   js6.innerHTML="正确";
                 }
         }
-        birthady.onfocus=function(){
+        birthday.onfocus=function(){
             setTimeout(function(){jingshi6.innerHTML=""},0.001);
                 if (!birthday.value==""){
                     js6.innerHTML="";
