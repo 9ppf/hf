@@ -1,76 +1,195 @@
 <!doctype html>
 <html lang="en">
- <head>
-  <meta charset="UTF-8">
-  <meta name="Generator" content="EditPlus®">
-  <meta name="Author" content="">
-  <meta name="Keywords" content="">
-  <meta name="Description" content="">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Document</title>
-   <link rel="stylesheet" href="../boot/bootstrap.css">
-   <script href="../boot/jquery.min.js"></script>
-   <script href="../boot/popper.min.js"></script>
-   <script href="../boot/bootstrap.min.js"></script>
-   <link rel="stylesheet" href="../css/index.css">
-   <link rel="stylesheet" href="../css/common.css">
- </head>
- <body>
- <!--上半部分-->
-  <div id="top">
-     <!--导航栏1-->
-       <nav id="nav1">
-	        <input type="text" placeholder="请输入要搜索的词" class="nav1_1">
-		      <div class="dsj dsj_top"></div>
-	        <div title="点击后加载响应页面" class="sou">
-		         <a href="">搜索</a>
-		      </div>
-  	   </nav>
 
-     <!--导航栏2-->
-        <nav id="nav2">
-	         <div class="nav2_1">
-	    <a href="#">客户服务</a>
-	    <a href="#">地址</a>
-	         </div>
-	         <div class="nav2_2">
-	    <a href="#">新用户注册</a>
-	    <a href="#">请登录</a>
-	    <a href="#">我的订单</a>
-	    <a href="#">我的会员</a>
-	    <a href="#">购物车</a>
-	         </div>
-	      </nav>
-  </div>
-   
- <!--中间-->
-   <div id="middle">  
-     <!--左侧边栏-->
-      <aside id="left_aside">
-	      <div class="fenlei">
-		      <a href="" class="all zhuan"></a>
-				</div>
+<head>
+	<meta charset="UTF-8">
+	<meta name="Generator" content="EditPlus®">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>首页</title>
+	<link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<script src="../js/jquery-1.11.3.js"></script>
+	<script src="../js/details.js"></script>
+</head>
+
+<body>
+	<!--上半部分-->
+	<div id="top">
+		<!--导航栏1-->
+		<nav id="nav1">
+			<input type="text" placeholder="请输入要搜索的词" class="nav1_1">
+			<div class="dsj dsj_top"></div>
+			<div title="点击后加载响应页面" class="sou">
+				<a href="">搜索</a>
+			</div>
+		</nav>
+
+		<!--导航栏2-->
+		<nav id="index_nav2">
+			<!-- 全部分类小背景 -->
+			<div class="fenlei">
+				<div class="all_del">商品分类</div>
 				<!-- 情侣装 -->
-	      <div class="fu">
-		      <a href="" class="lover zhuan"></a>
-		      <ul class="lovers h">
-						<li><a href="">广袖衫</a></li>
-						<li><a href="">曲裾</a></li>
-						<li><a href="">褙子</a></li>
-						<li><a href="">袄裙</a></li>
-						<li><a href="">交领襦裙</a></li>
-						<li><a href="">齐胸襦裙</a></li>
-						<li><a href="">对襟襦裙</a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-						<li><a href=""></a></li>
-		      </ul>
+				<div class="fu">
+					<!-- 小背景 -->
+					<a href="" class="lover">
+						<div class="zhuan3">情侣装</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="lovers h">
+						<!-- 广袖 -->
+						<li>
+							<a href="">广袖衫</a>
+							<div class="fl">
+								<span>百鸟朝凤 大袖男男女情侣</span>
+								<span>广袖古风情侣装</span>
+								<span>汉服古风大袖衫侠客情侣</span>
+								<span>祥狮流云绣花广袖情侣</span>
+							</div>
+						</li>
+						<!-- 曲裾 -->
+						<li>
+							<a href="">曲裾</a>
+							<div class="f1">
+								<span>改良曲裾</span>
+								<span>日常曲裾情侣</span>
+								<span>曲裾襦裙影楼写真服</span>
+								<span>汉服男交领直裾女曲裾春</span>
+							</div>
+						</li>
+						<!-- 褙子 -->
+						<li>
+							<a href="">褙子</a>
+							<div class="f1">
+								<span>褙子下裙情侣装</span>
+								<span>中国风对襟褙子情侣套装</span>
+								<span>清新淡雅褙子情侣套装</span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 交领襦裙 -->
+						<li>
+							<a href="">交领襦裙</a>
+							<div class="fl">
+								<span>男女汉元素中国风情侣</span>
+								<span>男女汉服交领传统风情侣</span>
+								<span></span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 齐胸襦裙 -->
+						<li>
+							<a href="">齐胸襦裙</a>
+							<div class="fl">
+								<span>齐胸襦裙绣花春夏情侣款</span>
+								<span>柒锦阁原创竹幽齐胸传统汉服情侣装</span>
+								<span>齐胸襦裙情侣套装</span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 对襟襦裙 -->
+						<li>
+							<a href="">对襟襦裙</a>
+							<div class="fl">
+								<span>古装对襟汉元素情侣装</span>
+								<span>醉芙蓉对襟情侣汉服</span>
+								<span>中国风春装对襟情侣套装</span>
+								<span>汉服对襟古风学生情侣装</span>
+							</div>
+						</li>
+						<!-- 改良版 -->
+						<li>
+							<a href="">改良版</a>
+							<div>
+								<span>男女汉服改良古装武侠风情侣</span>
+								<span>日常刺绣汉服套装</span>
+							</div>
+						</li>
+						<!-- 日常妆 -->
+						<li>
+							<a href="">日常装</a>
+							<div>
+								<span>夏装古风广袖情侣套装</span>
+								<span>学生日常流仙裙</span>
+								<span>日常吊带宋裤情侣套装</span>
+								<span>中国风明制古风公主学生情侣装</span>
+							</div>
+						</li>
+					</ul>
 				</div>
+
 				<!-- 亲子装 -->
-	      <div class="fu">
-		      <a href="" class="parents zhuan"></a>
+				<div class="fu">
+					<!-- 小背景 -->
+					<a href="" class="parents">
+						<div class="zhuan3">亲子装</div>
+					</a>
+					<!-- 大背景 -->
 					<ul class="p_f h">
-						<li><a href="">广袖衫</a></li>
+						<!-- 母女装 -->
+						<li>
+							<a href="">母女装</a>
+							<div class="qz">
+								<span>亲子装母女连衣裙民族风汉服春夏装</span>
+								<span>亲子装汉服母女休闲公主汉元素套装</span>
+								<span>亲子装母女古装仙女服古筝汉服</span>
+								<span>夏季改良日常亲子装母女齐胸襦裙</span>
+								<span>汉服亲子超仙绣花母女两件套</span>
+								<span>亲子汉服汉元素襦裙母女摄影</span>
+							</div>
+						</li>
+						<!-- 母子装 -->
+						<li>
+							<a href="">母子装</a>
+							<div class="qz">
+								<span>龙飞亲子汉服母子日常古装</span>
+								<span>亲子古装汉服母子装摄影楼写</span>
+								<span>交领汉服亲子装母子装</span>
+								<span>汉服亲子装唐装母子装</span>
+								<span>母子装男童创意亲子装</span>
+								<span>亲子复古儿童男宝宝汉服书童</span>
+							</div>
+						</li>
+						<!-- 一家人装 -->
+						<li>
+							<a href="">一家人装</a>
+							<div class="qz">
+								<span>汉服亲子装洋气套装</span>
+								<span>汉服亲子装套装</span>
+								<span>亲子装唐装中国风夏新</span>
+								<span>亲子装汉服武侠风</span>
+								<span>汉服亲子装唐装</span>
+								<span>过年唐装亲子装全家装</span>
+							</div>
+						</li>
+						<!-- 父子装 -->
+						<li>
+							<a href="">父子装</a>
+							<div class="qz">
+								<span>亲子汉服口国学新款</span>
+								<span>父子民国复古汉服</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 闺蜜装 -->
+				<div class="fu">
+					<!-- 小背景 -->
+					<a href="" class="girls">
+						<div class="zhuan3">闺蜜装</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="girls_f h">
+						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
 						<li><a href=""></a></li>
@@ -82,812 +201,788 @@
 						<li><a href=""></a></li>
 					</ul>
 				</div>
-				<!-- 闺蜜装 -->
-				<div class="fu">
-						<a href="" class="girls zhuan"></a>
-						<ul class="girls_f h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
-				</div>
+
 				<!-- 女装 -->
 				<div class="fu">
-						<a href="" class="girl zhuan"></a>
-						<ul class="g_f h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="girl">
+						<div class="zhuan5">女装</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="g_f h">
+						<!-- 广袖 -->
+						<li>
+							<a href="">广袖衫</a>
+							<div class="fl">
+								<span>连衣裙古风广袖</span>
+								<span>广袖古风流仙裙</span>
+								<span>广袖齐腰套装</span>
+								<span>中国风大袖衫外套</span>
+							</div>
+						</li>
+						<!-- 曲裾 -->
+						<li>
+							<a href="">曲裾</a>
+							<div class="f1">
+								<span>成人礼仪曲裾服</span>
+								<span>曲裾襦裙舞蹈服</span>
+								<span>曲裾襦裙影楼写真服</span>
+								<span>曲裾襦裙演出服</span>
+							</div>
+						</li>
+						<!-- 褙子 -->
+						<li>
+							<a href="">褙子</a>
+							<div class="f1">
+								<span>对襟襦裙褙子下裙</span>
+								<span>中国风对襟褙子</span>
+								<span>清新淡雅褙子套装</span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 袄裙 -->
+						<li>
+							<a href="">袄裙</a>
+							<div class="fl">
+								<span>传统汉服刺绣袄裙</span>
+								<span>刺绣秋冬袄裙</span>
+								<span></span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 交领襦裙 -->
+						<li>
+							<a href="">交领襦裙</a>
+							<div class="fl">
+								<span>交领襦裙汉服</span>
+								<span>梨花渡原创齐胸对襟襦裙</span>
+								<span></span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 齐胸襦裙 -->
+						<li>
+							<a href="">齐胸襦裙</a>
+							<div class="fl">
+								<span>齐胸襦裙绣花春夏款</span>
+								<span>齐胸春夏小清新款</span>
+								<span>梨花渡原创齐胸襦裙</span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 对襟襦裙 -->
+						<li>
+							<a href="">对襟襦裙</a>
+							<div class="fl">
+								<span>对襟刺绣传统汉服</span>
+								<span>汉服醉芙蓉对襟</span>
+								<span>中国风春装对襟套装</span>
+								<span></span>
+							</div>
+						</li>
+						<!-- 改良版 -->
+						<li>
+							<a href="">改良版</a>
+							<div>
+								<span>传统日常改良古装春</span>
+								<span>日常刺绣汉服套装</span>
+							</div>
+						</li>
+						<!-- 日常妆 -->
+						<li>
+							<a href="">日常装</a>
+							<div>
+								<span>夏装连衣裙古风广袖</span>
+								<span>学生日常流仙裙</span>
+								<span>日常吊带宋裤汉服</span>
+								<span></span>
+							</div>
+						</li>
+					</ul>
 				</div>
+
 				<!-- 男装 -->
 				<div class="fu">
-						<a href="" class="boy zhuan"></a>
-						<ul class="b_f h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="boy">
+						<div class="zhuan5">男装</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="b_f h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
+
 				<!-- 童装 -->
 				<div class="fu">
-						<a href="" class="child zhuan"></a>
-						<ul class="c_f h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="child">
+						<div class="zhuan5">童装</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="c_f h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
-			  <!-- 鞋子 -->
+
+				<!-- 鞋子 -->
 				<div class="fu">
-						<a href="" class="shoes1 zhuan"></a>
-						<ul class="shoes h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="shoes1">
+						<div class="zhuan5">鞋子</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="shoes h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
+
 				<!-- 颈饰 -->
 				<div class="fu">
-						<a href="" class="xl zhuan"></a>
-						<ul class="xianglian h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="xl">
+						<div class="zhuan5">项链</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="xianglian h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
+
 				<!-- 耳饰 -->
 				<div class="fu">
-						<a href="" class="ear zhuan"></a>
-							<ul class="ershi h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="ear">
+						<div class="zhuan5">耳饰</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="ershi h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
+
 				<!-- 手饰 -->
 				<div class="fu">
-						<a href="" class="hand zhuan"></a>
-						<ul class="shoushi h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="hand">
+						<div class="zhuan5">手饰</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="shoushi h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
+
 				<!-- 头饰 -->
 				<div class="fu">
-						<a href="" class="header zhuan"></a>
-						<ul class="toushi h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+					<!-- 小背景 -->
+					<a href="" class="header">
+						<div class="zhuan5">头饰</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="toushi h">
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li>
+					</ul>
 				</div>
+
 				<!-- 其他 -->
 				<div class="fu">
-						<a href="" class="others zhuan"></a>
-						<ul class="qita h">
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
-			  </div>
-	    </aside>
-     <!-- lunbo-->
-		  <div>
-	         <div>
-			  <img src="../img/top_lunbo8_1.jpg" alt="">
-		     </div>
-	      </div>			 
-     <!--右边侧栏-->
-      <aside>
-	    <div class="right_aside1"></div>
-	   </aside>
-   </div>
- <!-- 楼层-->
-    <div id="louceng">
-       <!--一楼女装-->
-	     <div class="yilou" name="first">女装</div>
-	     <div class="girls1">
-          <!--女装上层 -->
-		    <div class="louceng1_1">
-		   	 <div class="g1">
-			   <img src="../img/girl1_2.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl1_3.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl1_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl1_5.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					 <img src="../img/girl1_6.jpg" class="rounded"> 
-					</div>
-			   </div>
-			   <span class="price">￥199</span>
-			   <p class="particulars">染锦阁汉服杜若改良魏晋风古装广袖襦裙中国风刺绣古装留仙裙日常</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1">
-			   <img src="../img/girl2_14.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					 <img src="../img/girl2_14.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					 <img src="../img/girl2_14.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					 <img src="../img/girl2_14.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					 <img src="../img/girl2_14.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">【云梦台】梨花渡原创汉服女 六米大摆仙气日常春夏齐胸对襟襦裙</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1">
-			   <img src="../img/girl3_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl3_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl3_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl3_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl3_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1">
-			   <img src="../img/girl5_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl5_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl5_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl5_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl5_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">汉服女古装仙女中国风飘逸清新淡雅改良古风日常装襦裙套装演出服</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1 g_last ">
-			   <img src="../img/girl8_5.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl8_5.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl8_5.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl8_5.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl8_5.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">仙女2019春季女装文艺复古绣花高腰中袖长款连衣裙九分袖汉服</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		    </div>
-          <!--女装二层-->
-		     <div class="louceng1_2">
-		   	 <div class="g1">
-			   <img src="../img/girl9_4.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl9_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl9_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl9_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl9_4.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">初姗古装女仙女汉服超仙改良襦裙广袖流仙裙中国风清新淡雅演出服</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1">
-			   <img src="../img/girl10_4.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					   <img src="../img/girl10_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl10_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl10_4.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl10_4.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">BOBO Angel原创改良锦鲤古装古风汉服春夏装女中国风襦裙汉元素套装</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1">
-			   <img src="../img/girl11_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl11_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl11_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl11_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl11_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">丸涵新款改良广袖汉服女交领襦裙日常学生装汉元素套装班服中国风古装</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1">
-			   <img src="../img/girl12_2.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl12_2.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl12_2.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl12_2.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl12_2.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">雅帝泽2019新款锦鲤改良汉服女学生汉元素古装襦裙古风日常仙女装</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		   	 <div class="g1 g_last">
-			   <img src="../img/girl13_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/girl13_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl13_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/girl13_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					 <img src="../img/girl13_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">高档古装汉服女装襦裙中国风元旦年会古典舞蹈古筝演出服成人礼</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			   </div>
-		     </div>
-		   </div>
-	     <!-- 二楼男装-->
-		   <div class="erlou">男装</div>
-		   <div class="boys">
-            <!-- 男装上层-->
-		    <div class="louceng2_1">
-			    <div class="b1">
-			      <img src="../img/boy1_2.jpg" class="rounded">
-			      <div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy1_2.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy1_2.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy1_2.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy1_2.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-			    <div class="b1">
-			        <img src="../img/boy2_1.jpg">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy2_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy2_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy2_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy2_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-				<div class="b1">
-			        <img src="../img/boy3_3.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy3_3.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy3_3.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy3_3.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy3_3.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-				<div class="b1">
-			        <img src="../img/boy4_3.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy4_3.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy4_3.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy4_3.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy4_3.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-				<div class="b1 b_last">
-			        <img src="../img/boy5_1.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy5_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy5_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy5_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy5_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
+					<!-- 小背景 -->
+					<a href="" class="others">
+						<div class="zhuan5">其他</div>
+					</a>
+					<!-- 大背景 -->
+					<ul class="p_f h">
+						<!-- 母女装 -->
+						<li>
+							<a href="">母女装</a>
+							<div class="qz">
+								<div>
+									<span>亲子装母女连衣裙民族风汉服春夏装</span>
+									<span>亲子装汉服母女休闲公主汉元素套装</span>
+									<span>亲子装母女古装仙女服古筝汉服</span>
+								</div>
+								<div>
+									<span>夏季改良日常亲子装母女齐胸襦裙</span>
+									<span>汉服亲子超仙绣花母女两件套</span>
+									<span>亲子汉服汉元素襦裙母女摄影</span>
+								</div>
+							</div>
+						</li>
+						<!-- 母子装 -->
+						<li>
+							<a href="">母子装</a>
+							<div class="qz">
+								<span>龙飞亲子汉服母子日常古装</span>
+								<span>亲子古装汉服母子装摄影楼写</span>
+								<span>交领汉服亲子装母子装</span>
+								<span>汉服亲子装唐装母子装</span>
+								<span>母子装男童创意亲子装</span>
+								<span>亲子复古儿童男宝宝汉服书童</span>
+							</div>
+						</li>
+						<!-- 一家人装 -->
+						<li>
+							<a href="">一家人装</a>
+							<div class="qz">
+								<span>汉服亲子装洋气套装</span>
+								<span>汉服亲子装套装</span>
+								<span>亲子装唐装中国风夏新</span>
+								<span>亲子装汉服武侠风</span>
+								<span>汉服亲子装唐装</span>
+								<span>过年唐装亲子装全家装</span>
+							</div>
+						</li>
+						<!-- 父子装 -->
+						<li>
+							<a href="">父子装</a>
+							<div class="qz">
+								<span>亲子汉服口国学新款</span>
+								<span>父子民国复古汉服</span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
-            <!-- 男装二层-->
-		    <div class="louceng2_2">
-			    <div class="b1">
-			      <img src="../img/boy7_1.jpg" class="rounded">
-			      <div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-			    <div class="b1">
-			        <img src="../img/boy7_1.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-				<div class="b1">
-			        <img src="../img/boy7_1.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-				<div class="b1">
-			        <img src="../img/boy7_1.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-				<div class="b1 b_last">
-			        <img src="../img/boy7_1.jpg" class="rounded">
-					<div class="photos">
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-						<div class="little_photo">
-						  <img src="../img/boy7_1.jpg" class="rounded">
-						</div>
-			        </div>
-			        <span class="price">￥224.24</span>
-			        <p class="particulars">详情</p>
-					<button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			    </div>
-			</div>			
-		   </div>
-       <!--童装-->
-	     <div class="sanlou">童装</div>
-	     <div class="child3">
-           <!--童装上层-->
-		   <div class="louceng3_1">
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1 g_last ">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   </div>
-           <!--童装二层-->
-		   <div class="louceng3_2">
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   	 <div class="c1 c_last">
-			   <img src="../img/child1_1.jpg" class="rounded">
-			   <div class="photos">
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-					<div class="little_photo">
-					  <img src="../img/child1_1.jpg" class="rounded">
-					</div>
-			   </div>
-			   <span class="price">￥224.24</span>
-			   <p class="particulars">详情</p>
-			   <button class="btn btn-danger"><a href="product_datail1.html">详情</a></button>
-			 </div>
-		   </div>
-		   </div>
-    </div>
+			<a href="#">客户服务</a>
+			<a href="#">地址</a>
+			<a href="#">我的订单</a>
+			<a href="#">我的会员</a>
+			<a href="#">购物车</a>
+			<a href="#">新用户注册</a>
+			<a href="#">请登录</a>
+		</nav>
+		<!--左侧 -->
+	</div>
+	<div class="lunbo_top"></div>
+	<!--中间-->
+	<div id="index_middle">
+		<!-- lunbo-->
+		<main id="main">
+			<div id="banner">
+				<div id="btn-left"></div>
+				<ul id="ul-imgs">
+					<li><a href="javascript:;"><img src="../img_lunbo/top_lunbo1_4.jpg"></a></li>
+					<li><a href="javascript:;"><img src="../img_lunbo/top_lunbo1_1.jpg"></a></li>
+					<li><a href="javascript:;"><img src="../img_lunbo/top_lunbo1_2.jpg"></a></li>
+					<li><a href="javascript:;"><img src="../img_lunbo/top_lunbo1_3.jpg"></a></li>
+					<!--注意！最后li个数要比实际图片张数多1，最后一个li里的img是重复第一张li的图片-->
+					<li><a href="javascript:;"><img src="../img_lunbo/top_lunbo1_4.jpg"></a></li>
+				</ul>
+				<ul id="ul-idxs">
+					<!--虽然li个数比实际图片张数多1，但小圆点的个数不必多1-->
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<div id="btn-right"></div>
+			</div>
+		</main>
+	</div>
+	<script src="../js/rotate.js"></script>
+	<!-- 楼层-->
+	<div id="louceng">
+		<!--一楼女装-->
+		<div class="lc_guodu">
+			<div class="lc_cart"></div>
+			<div class="yilou" name="first">女装推荐</div>
+			<div class="lc_cart"></div>
+		</div>
 
- <!--尾部-->
- </body>
+		<div class="girls1">
+			<!--女装上层 -->
+			<div class="louceng1_1">
+				<div class="lc_left1">
+					<div class="lc_title">
+						<div>
+							<span>飘飘长衣 </span>
+							<span>· 仙女挚爱</span>
+						</div>
+						<div>新品上市</div>
+					</div>
+					<div class="lc_big_photo">
+						<div class="g1">
+							<img src="../img/girl1_2.jpg" class="rounded">
+							<div class="girl_details1">
+								<div>
+									<div>染锦阁汉服杜若改良魏晋风古装广袖襦裙中国风刺绣古装留仙裙日常</div>
+									<div class="index_price1">
+										<div>抢购价</div>￥299
+									</div>
+								</div>
+								<div class="index_botton1">
+									<div>查看详情</div>
+								</div>
+							</div>
+						</div>
+						<div class="g1">
+							<img src="../img/girl2_14.jpg" class="rounded">
+							<div class="girl_details1">
+								<div>
+									<div>梨花渡原创汉服女 六米大摆仙气日常春夏齐胸对襟襦裙</div>
+									<div class="index_price1">
+										<div>抢购价</div>￥288
+									</div>
+								</div>
+								<div class="index_botton1">
+									<div>查看详情</div>
+								</div>
+							</div>
+						</div>
+						<div class="g1">
+							<img src="../img/girl3_1.jpg" class="rounded">
+							<div class="girl_details1">
+								<div>
+									<div>鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风</div>
+									<div class="index_price1">
+										<div>抢购价</div>￥288
+									</div>
+								</div>
+								<div class="index_botton1">
+									<div>查看详情</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="lc_right1">
+					<div class="lc_title2">
+						<div>
+							<span>夏日清凉</span>
+							<span>·酷暑必备</span>
+						</div>
+						<div>热卖商品</div>
+					</div>
+					<div class="lc_big_photo">
+						<div class="g1">
+							<img src="../img/girl5_1.jpg" class="rounded">
+							<div class="girl_details1">
+								<div>
+									<div class="g_2">鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风</div>
+									<div class="index_price2">
+										<div>抢购价</div>￥288
+									</div>
+								</div>
+								<div class="index_botton1">
+									<div>查看详情</div>
+								</div>
+							</div>
+						</div>
+						<div class="g1">
+							<img src="../img/girl8_5.jpg" class="rounded">
+							<div class="girl_details1">
+								<div>
+									<div class="g_2">鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风</div>
+									<div class="index_price2">
+										<div>抢购价</div>￥288
+									</div>
+								</div>
+								<div class="index_botton1 index_button">
+									<div>查看详情</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!--女装二层-->
+			<div class="louceng1_2">
+				<div>
+					<div class="g2">
+						<img src="../img/girl9_4.jpg" class="rounded">
+						<div>
+							<div class="index_g3">
+								鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风
+							</div>
+							<div class="index_price3">
+								<div>热售中</div>
+								￥299
+							</div>
+						</div>
+						<div class="index_zhezhao">
+							<div>查看详情</div>
+						</div>
+					</div>
+
+				</div>
+				<div>
+					<div class="g2">
+						<img src="../img/girl10_4.jpg" class="rounded">
+						<div>
+							<div class="index_g3">
+								鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风
+							</div>
+							<div class="index_price3">
+								<div>热售中</div>
+								￥299
+							</div>
+						</div>
+						<div class="index_zhezhao">
+							<div>查看详情</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="g2">
+						<img src="../img/girl11_1.jpg" class="rounded">
+						<div>
+							<div class="index_g3">
+								鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风
+							</div>
+							<div class="index_price3">
+								<div>热售中</div>
+								￥299
+							</div>
+						</div>
+						<div class="index_zhezhao">
+							<div>查看详情</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="g2">
+						<img src="../img/girl12_2.jpg" class="rounded">
+						<div>
+							<div class="index_g3">
+								鹿韵记原创改良汉服女汉元素立夏齐胸连衣裙春季新品日常中国风
+							</div>
+							<div class="index_price3">
+								<div>热售中</div>
+								￥299
+							</div>
+						</div>
+						<div class="index_zhezhao">
+							<div>查看详情</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 二楼男装-->
+		<div class="lc_guodu">
+			<div class="lc_cart lc_cart2"></div>
+			<div class="erlou" name="first">绅士之选</div>
+			<div class="lc_cart lc_cart2"></div>
+		</div>
+
+		<div class="boys">
+			<!-- 男装上层-->
+			<div class="louceng2_1">
+				<div class="cl_title"></div>
+				<div class="b1">
+					<img src="../img/boy1_2.jpg" class="rounded">
+					<div class="b1_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+				<div class="b1">
+					<img src="../img/boy2_1.jpg">
+					<div class="b1_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+				<div class="b1">
+					<img src="../img/boy3_3.jpg" class="rounded">
+					<div class="b1_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+			</div>
+			<!-- 男装二层-->
+			<div class="louceng2_2">
+				<div class="b2">
+					<img src="../img/boy7_1.jpg" class="rounded">
+					<div class="b1_zhezhao b2_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+				<div class="b2">
+					<img src="../img/boy8_1.jpg" class="rounded">
+					<div class="b1_zhezhao b2_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+				<div class="b2">
+					<img src="../img/boy9_1.jpg" class="rounded">
+					<div class="b1_zhezhao b2_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+				<div class="b2">
+					<img src="../img/boy6_1.jpg" class="rounded">
+					<div class="b1_zhezhao b2_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+				<div class="b2">
+					<img src="../img/boy10_1.jpg" class="rounded">
+					<div class="b1_zhezhao b2_zhezhao">
+						<div>查看详情</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--童装-->
+		<div class="lc_guodu">
+			<div class="lc_cart"></div>
+			<div class="yilou" name="first">童装推荐</div>
+			<div class="lc_cart"></div>
+		</div>
+
+		<div class="child3">
+			<div class="c_girl">
+				<div class="c_title1">最萌女宝</div>
+				<div>
+					<div class="c1">
+						<img src="../img/cg1_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+					<div class="c1">
+						<img src="../img/cg2_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="c1">
+						<img src="../img/cg3_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+					<div class="c1">
+						<img src="../img/cg4_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c_boy">
+				<div class="c_title2">最帅男宝</div>
+				<div>
+					<div class="c1">
+						<img src="../img/cb1_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+					<div class="c1">
+						<img src="../img/cb2_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="c1">
+						<img src="../img/cb3_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+					<div class="c1">
+						<img src="../img/cb4_1.jpg" class="rounded">
+						<div class="index_zhezhao3">
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+							<div>
+								<div class="c3_button cb_button">查看详情</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--右边侧栏-->
+	<aside id="right_aside"></aside>
+	<!-- 尾部 -->
+	<div class="lc_guodu">
+		<div class="lc_cart"></div>
+		<div class="yilou" name="first">我们承诺</div>
+		<div class="lc_cart"></div>
+	</div>
+	<div id="footer">
+
+	</div>
+	<script>
+		$(function () {
+			$('#right_aside').load('right_aside.html');
+			$('#footer').load('footer.html');
+		})
+	</script>
+	<script src="../js/index.js"></script>
+	<script>
+	(function(){
+    var uname=sessionStorage.getItem("uname");
+	var welcome=document.querySelector("#index_nav2>a:last-child")
+	var login=document.createElement("p")
+	var nav2=document.getElementById("index_nav2")
+	welcome.innerHTML=""
+    login.innerHTML=uname
+	nav2.appendChild(login)
+	console.log(nav2)
+    })()
+	</script>
+</body>
+
 </html>

@@ -8,96 +8,102 @@
   <meta name="Description" content="">
   <title>Document</title>
    <link rel="stylesheet" href="../css/common.css">
-   <style>
-     body{
-	 background:url("../img/reg1.jpg") 0 0 no-repeat scroll transparent;
-	 background-size:cover;
-      }
-     #reg_table{
-                width:357px;
-                height:492px;
-                position:absolute;
-                top:15%;
-                right:10%;
-                font-size:25px;
-                color:#d99f94;
-                border:2px solid rgba(255,255,255,0.1);
-                padding-left:31px;
-                border-radius:32px;
-                background: -webkit-linear-gradient(#f1c1ae42,#ebd8c9,#f1c1ae42);
-                box-shadow:9px 2px 31px rgba(98,154,255,0.1)
-               }
-      #reg_table input{
-                width:222px;
-                height:35px;
-                background-color:#fbece08a;
-                border-radius:15px;
-                border:2px solid rgba(255,255,255,0.1)
-               }
-       #touxiang{
-                height:53px;
-                width:290px
-               }
-      #touxiang div{
-                float:left
-               }
-     .avatar{
-               width:50px;
-               height:50px;
-               border-radius:50%;
-               border:2px solid red;
-               margin-right:30px;
-               margin-left:20px
-              }
-       .title{
-               margin-top:10px;
-               margin-left:80px
-              }
-       .tijiao{
-               margin-top:18px;
-               margin-left:38px
-              }
-      </style>
+	 <link rel="stylesheet" href="../css/reg.css">
+	 <script src="../js/yanzheng.js"></script>
  </head>
  <body>
+	  <div class="zong">
+			  <img src="../img/reg1.jpg" alt="">
         <div id="reg_table">
+					<!-- 标题 -->
 	          <div id="touxiang">
 	            <div class="title">美丽汉服注册</div>
-	          </div>
-			  <br>
-	          昵称：<input type="text" name="uname" id="uname"><br>
-              密码：<input type="text" name="upwd" id="upwd"><br>
-              邮箱：<input type="text" name="email"
-			  id="email"><br>
-              手机：<input type="text" name="phone"
-			  id="phone"><br>
-              姓名：<input type="text" name="user_name"
-			  id="user_name"><br>
-              性别：<input type="text" name="gender" id="gender"><br>
-              生日：<input type="text"name="birthday"
-			  id="birthday"><br>
-	          <input type="submit" class="tijiao" onclick="reg()">
+						</div>
+
+					<!-- 昵称 -->
+						<div class="nicheng">
+							<div>昵称：</div>
+							<input type="text" id="uname" class="srk" placeholder="请输入昵称" onblur="javascript:nicheng();" onfocus="javascript:nicheng();">
+						</div>
+						<!-- 昵称验证 -->
+            <div id="jingshi">
+								<div id="jingshi1"></div>
+						</div>
+
+				  <!-- 密码 -->
+						<div>
+							<div>密码：</div>	
+							<input type="text" id="upwd" class="srk" onblur="javascript:mima();" onfocus="javascript:mima();">
+						</div>
+						<!-- 密码验证 -->
+						<div id="jingshi">
+								<div id="jingshi2"></div>
+						</div>
+
+					<!-- 邮箱 -->
+						<div>
+							 <div>邮箱：</div>
+							 <input type="text" id="email" class="srk" onfocus="javascript:youxiang();" onblur="javascript:youxiang();">
+						</div>
+						<!-- 邮箱验证 -->
+						<div id="jingshi">
+								<div id="jingshi3"></div>
+						</div>
+
+					<!-- 手机号 -->
+						<div>
+						   <div>手机：</div>
+							 <input type="text" id="phone" class="srk" onblur="javascript:phone();" onfocus="javascript:phone();">
+						</div>
+					<!-- 手机号验证 -->
+					  <div id="jingshi">
+							 <div id="jingshi4"></div>
+						</div>
+ 
+					<!--真实姓名 -->
+						<div>
+							<div>姓名：</div>	
+							<input type="text" id="user_name" class="srk" onblur="javascript:user_name();" onfocus="javascript:user_name();">
+						</div>
+						<!-- 真实姓名验证 -->
+						<div id="jingshi">
+								<div id="jingshi5"></div>
+						</div>
+				
+					<!-- 生日 -->
+						<div>
+							<div>生日：</div>
+							<input type="text" id="birthday" class="srk" onblur="javascript:birthday()" onfocus="javascript:birthday()">
+						</div>
+						<!-- 生日验证 -->
+						<div id="jingshi">
+								<div id="jingshi6"></div>
+						</div>								
+					<!--提交按钮  -->
+	          <button class="reg2">注册</button>
         </div>
-	  <script>
-	   function reg(){
-	    //创建异步对象
-	    var xhr=new XMLHttpRequest();
-		//绑定监听，接收响应
-		console.log(xhr);
-		xhr.onreadystatechange=function(){
-			if (xhr.readyState==4&&xhr.status==200){
-				var result=xhr.responseText;
-				alert(result);
-			}
-		}
-		//打开链接，创建请求
-		xhr.open("post","/user/reg",true);
-		//发送请求
-         //修改请求头信息
-		 xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
-		 var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&user_name="+user_name.value+"&gender="+gender.value+"&birthday="+birthday.value;
-		 xhr.send(formdata);
-		}
-	  </script>
+				<script>
+				function reg(){
+				//创建异步对象
+				var xhr=new XMLHttpRequest();
+				//绑定监听，接收响应
+				console.log(xhr);
+				xhr.onreadystatechange=function(){
+					if (xhr.readyState==4&&xhr.status==200){
+						var result=xhr.responseText;
+						console.log(result)
+					}
+				}
+				//打开链接，创建请求
+				xhr.open("post","/user/reg",true);
+				//发送请求
+						//修改请求头信息
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				var formdata="uname="+uname.value+"&upwd="+upwd.value+"&email="+email.value+"&phone="+phone.value+"&user_name="+user_name.value+"&birthday="+birthday.value+"&gender="+gender.value;
+				xhr.send(formdata);
+				}
+				</script>
+	 </div>
  </body>
 </html>
+
