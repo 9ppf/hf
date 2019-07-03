@@ -44,10 +44,10 @@ router.post('/reg',function(req,res){
 	 //console.log($uname,$upwd)
 	 //判断获取的数据是否为空
 	 if(!$uname){
-		 res.send("用户名为空");
+		 res.send("1");//用户名为空
 		 return;
 	 }if(!$upwd){
-		 res.send("密码为空");
+		 res.send("2");//密码为空
 		 return;
 	 }
 	 //执行sql语句，验证用户是否存在
@@ -55,9 +55,9 @@ router.post('/reg',function(req,res){
 	     pool.query(sql,[$uname,$upwd],function(err,result){
 			 if(err) throw err;
 			 if (result.length>0){
-				 res.send("登陆成功");
+				 res.send("3");//登陆成功
 			 }else{
-				 res.send("用户名或者密码错误");
+				 res.send("4");//用户名或者密码错误
 			 }
 		 });
  });
