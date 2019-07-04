@@ -517,7 +517,7 @@
 			<a href="#">我的会员</a>
 			<a href="#">购物车</a>
 			<a href="#">新用户注册</a>
-			<a href="#">请登录</a>
+			<a href="#" onclick="goLogin()">登录</a>
 		</nav>
 		<!--左侧 -->
 	</div>
@@ -579,7 +579,7 @@
 									</div>
 								</div>
 								<div class="index_botton1">
-									<div>查看详情</div>
+									<div onclick="javascript:jump()">查看详情</div>
 								</div>
 							</div>
 						</div>
@@ -971,16 +971,25 @@
 		})
 	</script>
 	<script src="../js/index.js"></script>
+
 	<script>
-	(function(){
+	(function isLogin(){
     var uname=sessionStorage.getItem("uname");
 	var welcome=document.querySelector("#index_nav2>a:last-child")
 	var login=document.createElement("p")
 	var nav2=document.getElementById("index_nav2")
-	welcome.innerHTML=""
-    login.innerHTML=uname
-	nav2.appendChild(login)
-	console.log(nav2)
+		if(uname==null){
+			welcome.innerHTML="登录"
+		}else{
+			welcome.innerHTML=""
+			login.className="islogin"
+			login.innerHTML=uname
+			login.onclick=function(){
+					window.location.replace("girl1_details.html")
+			}
+			nav2.appendChild(login)
+			console.log(nav2)
+		}	
     })()
 	</script>
 </body>
