@@ -24,8 +24,14 @@ body{overflow:hidden}
        margin:1vh 10vw;}
 
 /*上半部分*/
-.shang{margin-top:8vh;}
-
+.shang{margin-top:5vh;}
+#tishi{   
+       width: 86%;
+       height: 5vh;
+       margin: 0 auto;
+       color: red;
+       font-size: 3vh;
+}
 /*昵称，密码*/
 .shang>div{display:flex}
 

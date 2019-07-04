@@ -29,7 +29,12 @@
   width:1.5vw;
   height:1.5vw
 }
-
+.islogin{
+  display: inline-block;
+  cursor: pointer;
+  color: #ff5000;
+  font-weight: bold;
+}
 /*中间*/
   #index_middle{
          height:77vh;
