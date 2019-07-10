@@ -10,48 +10,32 @@ USE hanfu;
 -- #创建用户信息表hanfu_user
 CREATE TABLE hanfu_user(
   uid INT PRIMARY KEY AUTO_INCREMENT,--#用户的ID
-  uname VARCHAR(32),
-  upwd VARCHAR(32),
-  email VARCHAR(64),
-  phone CHAR(11),
-  avatar VARCHAR(128),        --#头像图片路径
-  user_name VARCHAR(32),      --#用户的真实姓名
+  uname VARCHAR(128),
+  upwd VARCHAR(128),
+  email VARCHAR(128),
+  phone CHAR(128),
+  avatar VARCHAR(65535),        --#头像图片路径
+  user_name VARCHAR(128),      --#用户的真实姓名
   gender  TINYINT,            --#性别0-> 女，1->男
   birthday DATETIME
 );
 
 -- #往用户信息表中插入数据
-INSERT INTO hanfu_user VALUES("1","heart","123456","1632867834@qq.com","13839494671","","吴一杰","0","1997-03-25");
-INSERT INTO hanfu_user VALUES("","littleluck","123457","123457@qq.com","12345678912","","叮叮","1","1993-10-03");
-INSERT INTO hanfu_user VALUES("","Devotion","123458","123458@qq.com","12345678913","","当当","1","1998-10-03");
-INSERT INTO hanfu_user VALUES("","Krismile","123459","123459@qq.com","12345678914","","梅梅","0","2000-11-16");
-INSERT INTO hanfu_user VALUES("","Alice","123450","123450@qq.com","12345678915","","喜妹","0","1997-03-05");
-INSERT INTO hanfu_user VALUES("","Amanda","123467","123467@qq.com","12345678921","","文肖","1","1993-10-03");
-INSERT INTO hanfu_user VALUES("","Constance","123468","123468@qq.com","12345678931","","文凯","1","2002-01-05");
-INSERT INTO hanfu_user VALUES("","Debby","123469","123469@qq.com","12345678941","","吴凯","1","1997-04-25");
-INSERT INTO hanfu_user VALUES("","Edwina","123460","123460@qq.com","12345678951","","芬芬","0","1994-02-23");
-INSERT INTO hanfu_user VALUES("","Elsa","123478","123478@qq.com","12345678961","","笑笑","0","2002-3-24");
-INSERT INTO hanfu_user VALUES("","Hulda","123479","123479@qq.com","12345678971","","璐璐","0","2000-6-09");
-INSERT INTO hanfu_user VALUES("","Julie","123470","123470@qq.com","12345678981","","杰克","1","1993-03-35");
-INSERT INTO hanfu_user VALUES("","Kama","123489","123489@qq.com","12345678991","","曼曼","0","2000-6-09");
-INSERT INTO hanfu_user VALUES("","Jocelyn","123480","123480@qq.com","12345678922","","约翰","1","1993-03-35");
-INSERT INTO hanfu_user VALUES("","Kay","123490","123490@qq.com","12345678932","","凯特","1","1997-04-25");
-INSERT INTO hanfu_user VALUES("","Jodie","123345","123345@qq.com","12345678942","","戴娜","0","2002-3-24");
-INSERT INTO hanfu_user VALUES("","Laura","123356","123356@qq.com","12345678952","","劳拉","0","2000-11-16");
+
 
 -- #创建用户地址表hanfu_receiver_address
 CREATE TABLE hanfu_receiver_adderss(
   aid INT PRIMARY KEY AUTO_INCREMENT, --#地址编号
   user_id INT,                --#用户编号
-  receiver VARCHAR(16),       --#接收人姓名
-  province  VARCHAR(16),      --#省
-  city  VARCHAR(16),          --#市
-  county VARCHAR(16),         --#县
+  receiver VARCHAR(128),       --#接收人姓名
+  province  VARCHAR(128),      --#省
+  city  VARCHAR(128),          --#市
+  county VARCHAR(128),         --#县
   address VARCHAR(128),       --#详细地址
-  cellphone VARCHAR(16),      --#手机
-  fixedphone VARCHAR(16),     --#固定电话
-  postcode CHAR(6),           --#邮编
-  tag  VARCHAR(16),           --#标签名
+  cellphone VARCHAR(128),      --#手机
+  fixedphone VARCHAR(128),     --#固定电话
+  postcode CHAR(128),           --#邮编
+  tag  VARCHAR(128),           --#标签名
   is_default BOOL             --#是否为当前用户的默认收货地址
 );
 
@@ -850,8 +834,6 @@ INSERT INTO hanfu_product_detail VALUES(
   "../img/girl12_30.jpg");
 
 -- 女十 共13张图片
-
--- #女九 共26张图片
 INSERT INTO hanfu_product_detail VALUES(
   "",
   "../img/girl13_1.jpg",
@@ -866,10 +848,11 @@ INSERT INTO hanfu_product_detail VALUES(
   "../img/girl13_11.png",
   "../img/girl13_12.png",
   "../img/girl13_13.png",
+  "../img/girl13_14.png",
   "../img/girl13_15.png",
   "../img/girl13_16.png",
   "../img/girl13_17.png",
-  "../img/girl13_18.png",
+  "../img/girl13_18.jpg",
   "../img/girl13_19.jpg",
   "../img/girl13_20.jpg",
   "../img/girl13_21.jpg",
@@ -880,10 +863,9 @@ INSERT INTO hanfu_product_detail VALUES(
   "../img/girl13_26.jpg",
   "../img/girl13_27.jpg",
   "../img/girl13_28.jpg",
-  "../img/girl13_29.jpg",
+  "../img/girl13_39.jpg",
   "../img/girl13_30.jpg",
-  "../img/girl13_31.jpg",
-  "../img/girl13_32.jpg");
+  "../img/girl13_31.jpg");
 
 --男装 1号，20张图片
 INSERT INTO hanfu_product_detail VALUES(
@@ -1225,6 +1207,18 @@ INSERT INTO hanfu_product_detail VALUES(
   "../img/boy10_29.jpg",
   "../img/boy10_30.jpg");
 
+
+-- #商品详情页大图表格big_img
+CREATE TABLE big_img(
+pid INT PRIMARY KEY  AUTO_INCREMENT,
+img VARCHAR(320)   --#图片路径
+);
+
+-- 往表中插数据
+INSERT INTO big_img VALUES(1,"../big_img/girl1_32.jpg");
+INSERT INTO big_img VALUES(null,"../big_img/girl1_31.jpg");
+INSERT INTO big_img VALUES(null,"../big_img/girl1_34.jpg");
+INSERT INTO big_img VALUES(null,"../big_img/girl1_33.jpg");
 -- #轮播图广告商品
 CREATE TABLE hanfu_index_carousel(
 cid INT PRIMARY KEY  AUTO_INCREMENT,
@@ -1234,7 +1228,7 @@ herf  VARCHAR(320)          --#图片跳转
 );
 
 --#往hanfu_index_carouse里添加数据
-INSERT INTO hanfu_index_carousel VALUES(1,"../img/top_lunbo8_1.jpg","l首页轮播广告商品1","");
-INSERT INTO hanfu_index_carousel VALUES("","../img/top_lunbo9_2.jpg","l首页轮播广告商品2","");
-INSERT INTO hanfu_index_carousel VALUES("","../img/top_lunbo10_1.jpg","l首页轮播广告商品3","");
-INSERT INTO hanfu_index_carousel VALUES("","../img/top_lunbo11_1.jpg","l首页轮播广告商品4","");
+INSERT INTO hanfu_index_carousel VALUES(1,"../img/top_lunbo1_1.jpg","l首页轮播广告商品1","");
+INSERT INTO hanfu_index_carousel VALUES("","../img/top_lunbo1_2.jpg","l首页轮播广告商品2","");
+INSERT INTO hanfu_index_carousel VALUES("","../img/top_lunbo1_3.jpg","l首页轮播广告商品3","");
+INSERT INTO hanfu_index_carousel VALUES("","../img/top_lunbo1_4.jpg","l首页轮播广告商品4","");
