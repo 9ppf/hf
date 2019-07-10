@@ -9,34 +9,43 @@ var router=express.Router();
 router.post('/reg',function(req,res){
    //获取post请求的数据
    //console.log(req.body);
-   //验证数据是否为空
+	 //验证数据是否为空
   var $uname=req.body.uname;
   var $upwd=req.body.upwd;
   var $email=req.body.email;
-  var $phone=req.body.phone;
+	var $phone=req.body.phone;
   var $user_name=req.body.user_name;
-  var $gender=req.body.gender;
-  var $birthday=req.body.birthday
-   if(!$uname){res.send("用户名为空");return;}
-   if(!$upwd){res.send("密码为空");return;}
-   if(!$email){res.send("邮箱为空");return;}
-   if(!$phone){res.send("手机号为空");return;}
-   if(!$user_name){res.send("真实姓名为空");return;}
-   if(!$gender){res.send("性别为空");return;}
-   if(!$birthday){res.send("生日为空");return;}
-   //把数据插入到数据库
-   pool.query('INSERT INTO hanfu_user SET ?',[req.body],function(err,result){
-	   if(err) throw err;
-	   if(result.affectedRows>0){
-		   var result="注册成功"
-		   res.send(result);
-	   }
-   });
+	var $birthday=req.body.birthday
+   if(!$uname){res.send("用户名为空");return;}//用户名为空
+	 if(!$upwd){res.send("密码为空");return;}//密码为空
+	 if(!$email){res.send("邮箱为空");return;}//邮箱为空
+	 if(!$user_name){res.send("真实姓名为空");return;}//真实姓名为空
+   if(!$birthday){res.send("生日为空");return;}//生日为空
+	 	// 根据手机号判断用户唯一性
+	 if(!$phone){
+		 res.send("手机号为空");return;//手机号为空
+		}else{
+			var sql="select * from hanfu_user where phone=?"
+		  	pool.query(sql,[$phone],function(err,result){
+				if(err) throw err;
+				if(result.length>0){
+					res.send("2");//用户注册过
+					return;
+				}else{
+					//把数据插入到数据库
+					pool.query('INSERT INTO hanfu_user SET ?',[req.body],function(err,result){
+						if(err) throw err;
+						if(result.affectedRows>0){
+							res.send("1");//注册成功
+						}
+					});
+				}	
+			})
+		}
 });
 
 //2.登录接口
- router.post("/login",function(req,res){
-	 
+router.post("/login",function(req,res){
 	 //声明变量接收获取的数据
 	 var $uname=req.body.uname;
 	 var $upwd=req.body.upwd;
@@ -61,8 +70,9 @@ router.post('/reg',function(req,res){
 			 }
 		 });
  });
+
 //3.用户修改
-  router.post('/update',function(req,res){
+ router.post('/update',function(req,res){
 	  //获取请求的数据
 	  //console.log(req.body);
 	  //验证数据是否为空
@@ -88,7 +98,32 @@ router.post('/reg',function(req,res){
 	  });
   });
 
-//4、用户列表
+//4、密码修改
+router.post('/forget',function(req,res){
+	var $phone=req.body.phone
+	var $upwd=req.body.upwd;
+	// 判断用户是否存在
+	if (!$phone){res.send("0");return;}
+	var sql="select * from hanfu_user where phone=?";
+	pool.query(sql,[$phone],function(err,result){
+			if (err) throw err;
+			// 存在的话修改其密码
+			if(result.length>0){
+				var sql2="UPDATE  hanfu_user SET upwd=? WHERE phone=?"
+				pool.query(sql2,[$upwd,$phone],function(err,result){
+					if(err) throw err;
+					if(result.affectedRows>0){
+						res.send("1");//修改成功
+						console.log(result)
+					}
+				});
+			}else{
+				res.send("2")//不存在
+			}
+	})
+})
+
+//5、用户列表
   router.get('/list',function(req,res){
 	  //获取数据
 	  //console.log(req.query);
@@ -111,7 +146,7 @@ router.post('/reg',function(req,res){
 	  });
   });
 
-//5、用户检索
+//6、用户检索
  router.get('/detail',function(req,res){
 	 //获取数据
 	 //console.log(req.query);
@@ -127,7 +162,7 @@ router.post('/reg',function(req,res){
 	 });
  });
 
-//6、用户删除
+//7、用户删除
 router.get('/delete',function(req,res){
 	//获取数据
 	//console.log(req.query);
