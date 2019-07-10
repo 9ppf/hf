@@ -25,26 +25,34 @@ function car_click(){
 
 //购物提示
 function buy(){
+    var uname=sessionStorage.getItem("uname");
+    if(uname==null){
+        alert("请先登录")
+       setInterval(function(){
+        window.location.replace("login.html")
+       },3000) 
+    }else{
     // 判断页面是否存在选中元素
-     if($("#size_f>.a_border").length>0 && $(".color>.a_border").length>0){
-       //获取输入框的值
-        var $ip_value=$(".buy_count>input").val();
-        // 获取选中的尺寸
-        var $size=$("#size_f>.a_border").html();
-        // 获取选中的颜色
-        var $color=$(".color>.a_border").attr("src");
-        // 提示的颜色
-        $(".buy_detil>div>img").attr("src",$color);
-        // 提示的尺寸
-        $(".buy_w .b_value").html($size);
-        //提示购买的数量
-        $(".buy_w .b_count").html($ip_value);
-        $(".d_buy").css("display","block");          
-     }else{
-        $(".buy_detil").html("").append('<div class="no_choose">没有选中您需要的商品呦</div>').addClass("ch_buy");
-        $(".buy_mgs").css("height","38vh");
-        $(".ok").css("display","none");
-        $(".d_buy").css("display","block");   
+    if($("#size_f>.a_border").length>0 && $(".color>.a_border").length>0){
+        //获取输入框的值
+         var $ip_value=$(".buy_count>input").val();
+         // 获取选中的尺寸
+         var $size=$("#size_f>.a_border").html();
+         // 获取选中的颜色
+         var $color=$(".color>.a_border").attr("src");
+         // 提示的颜色
+         $(".buy_detil>div>img").attr("src",$color);
+         // 提示的尺寸
+         $(".buy_w .b_value").html($size);
+         //提示购买的数量
+         $(".buy_w .b_count").html($ip_value);
+         $(".d_buy").css("display","block");          
+      }else{
+         $(".buy_detil").html("").append('<div class="no_choose">没有选中您需要的商品呦</div>').addClass("ch_buy");
+         $(".buy_mgs").css("height","38vh");
+         $(".ok").css("display","none");
+         $(".d_buy").css("display","block");   
+      }
      }
 }
 

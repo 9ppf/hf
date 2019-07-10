@@ -1,3 +1,4 @@
+// 一楼女装
 $(function(){
     $(".girl_details1").mouseenter(function(){
        $(this).parent().find(".girl_details1>.index_botton1")
@@ -16,8 +17,13 @@ $(function(){
    })
 })
 
-function session(){
-    var uname=sessionStorage.getItem("uname");
-    var welcome=document.querySelector("#index_nav2>a:last-child")
-    welcome.innerHTML=uname
+function jump(){
+    window.location.replace("girl1_details.html")
+}
+
+function goLogin(){
+    setTimeout(function(){
+        alert("即将前往登录")
+        window.location.replace("login.html")
+    },500)
 }

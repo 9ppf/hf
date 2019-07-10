@@ -1,6 +1,5 @@
 var i=0;
 var w=document.querySelector("#ul-imgs>li>a>img").clientWidth;
-console.log(w);
 var LIWIDTH=document.querySelector("#ul-imgs>li>a>img").clientWidth;;
 var DURATION=500;
 var LICOUNT=4;
@@ -28,7 +27,6 @@ function moveTo(to){
   for(var li of lis){
     li.className=""
   }
-  console.log(i);
   if(i==LICOUNT){
     i=0;
     setTimeout(function(){
@@ -46,7 +44,6 @@ btnRight.onclick=function(){
 }
 function move(n){
   if(canClick){
-    console.log(i+n);
     moveTo(i+n);
     canClick=false;
     setTimeout(function(){
