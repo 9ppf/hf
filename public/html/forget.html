@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
+    <title>密码重置</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/forget.css">
 </head>
 <body>
-    忘记
+    <div id="for_main">
+        <img src="../img/reg1.jpg" alt="" class="for_bg">
+        <div class="for_table">
+            <!-- 表单标题 -->
+            <div class="for_top">
+                <div onclick="javascript:back()">
+                   <img src="../icon/back3.png" alt="">   
+                </div>
+                <div class="for_title">重置密码</div>       
+            </div>
+            <div class="for_result"></div>
+            <!-- 手机号验证 -->
+			<div class="for_phone">
+                    <div class="wenzi_1">
+                        手机号
+                    </div> 
+                    <input type="text" id="phone" class="shurukuang" onblur="javascript:mobil();" onfocus="javascript:mobil();">
+            </div>
+            <div id="jingshi4"></div>
+            <!-- 新密码验证 -->
+            <div class="for_mima1">
+                    <div class="wenzi_1">新设密码</div>
+                    <input type="password" class="shurukuang" placeholder="由数字和字母组成，共8-10位" id="upwd" onblur="javascript:mima();" onfocus="javascript:mima();"><br>
+            </div>
+            <div id="jingshi2"></div>
+            <!-- 密码确认 -->
+            <div class="for_mima2">
+                  <div class="wenzi_1">确认密码</div>
+                  <input type="password" class="shurukuang confirm" placeholder="请确认密码" onblur="javascript:mima();" onfocus="javascript:mima();">
+            </div>
+            <div class="true"></div>
+            <div class="switchs">
+              <button onclick="javascript:forget()">确定</button>
+            </div>
+        </div>
+    </div>  
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/yanzheng.js"></script>
+    <script src="../js/md5.js"></script>
+    <script src="../js/forget.js"></script>
 </body>
 </html>

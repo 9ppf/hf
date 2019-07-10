@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="Generator" content="EditPlus®">
@@ -8,7 +7,7 @@
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
 	<link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
-	<title>Document</title>
+	<title>注册</title>
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/reg.css">
 </head>
@@ -17,15 +16,20 @@
 	<div class="zong">
 		<img src="../img/reg1.jpg" alt="">
 		<div id="reg_table">
-			<!-- 标题 -->
-			<div id="touxiang">
-				<div class="title">美丽汉服注册</div>
+			<div id="tt">
+				<div onclick="javascript:back()">
+					<img src="../icon/back3.png" alt=""> 
+				</div>
+				<div>
+				  新用户注册
+				</div>
 			</div>
-
+			<!--登录结果  -->
+			<div id="tishi"></div>
 			<!-- 昵称 -->
 			<div class="nicheng">
 				<div>昵称：</div>
-				<input type="text" id="uname" class="srk" placeholder="请输入昵称" onblur="javascript:nicheng();"
+				<input type="text" id="uname" class="srk" placeholder="3~10英文字母" onblur="javascript:nicheng();"
 					onfocus="javascript:nicheng();">
 			</div>
 			<!-- 昵称验证 -->
@@ -36,7 +40,9 @@
 			<!-- 密码 -->
 			<div>
 				<div>密码：</div>
-				<input type="text" id="upwd" class="srk" onblur="javascript:mima();" onfocus="javascript:mima();">
+				<input type="text" id="upwd" class="srk" onblur="javascript:mima();" onfocus="javascript:mima();"
+					placeholder="6~10位字母或数字">
+				<div class="eyes" onclick="javascript:show_eyes()"></div>
 			</div>
 			<!-- 密码验证 -->
 			<div id="jingshi">
@@ -57,7 +63,7 @@
 			<!-- 手机号 -->
 			<div>
 				<div>手机：</div>
-				<input type="text" id="phone" class="srk" onblur="javascript:phone();" onfocus="javascript:phone();">
+				<input type="text" id="phone" class="srk" onblur="javascript:mobil();" onfocus="javascript:mobil();">
 			</div>
 			<!-- 手机号验证 -->
 			<div id="jingshi">
@@ -67,8 +73,8 @@
 			<!--真实姓名 -->
 			<div>
 				<div>姓名：</div>
-				<input type="text" id="user_name" class="srk" onblur="javascript:user_name();"
-					onfocus="javascript:user_name();">
+				<input type="text" id="user_name" class="srk" onblur="javascript:real_name();"
+					onfocus="javascript:real_name();">
 			</div>
 			<!-- 真实姓名验证 -->
 			<div id="jingshi">
@@ -78,8 +84,8 @@
 			<!-- 生日 -->
 			<div>
 				<div>生日：</div>
-				<input type="text" id="birthday" class="srk" onblur="javascript:birthday()"
-					onfocus="javascript:birthday()">
+				<input type="text" id="birthday" class="srk" onblur="javascript:birth()"
+					onfocus="javascript:birth()" placeholder="格式为：month-day">
 			</div>
 			<!-- 生日验证 -->
 			<div id="jingshi">
@@ -88,9 +94,11 @@
 			<!--提交按钮  -->
 			<button class="reg2" onclick="javascript:reg()">注册</button>
 		</div>
-		<script src="../js/reg.js"></script>
-		<script src="../js/yanzheng.js"></script>
 	</div>
+	<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+	<script src="../js/yanzheng.js"></script>
+	<script src="../js/md5.js"></script>
+	<script src="../js/reg.js"></script>
 </body>
 
 </html>
