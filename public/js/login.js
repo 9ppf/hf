@@ -70,3 +70,16 @@ function login(){
         var formdata="uname="+uname.value+"&upwd="+$.md5(upwd.value);
         xhr.send(formdata);
     }
+
+    // 保存用户信息
+    function get(){
+        var $uname=localStorage.getItem("$uname");
+        var $upwd=localStorage.getItem("$upwd");
+        var $checked=localStorage.getItem("$checked");
+        var uname=document.getElementById("uname");
+        var upwd=document.getElementById("upwd");
+        var check=document.querySelector(".check")
+        uname.value=$uname;
+        upwd.value=$upwd;	
+        check.checked=$checked      
+    }
