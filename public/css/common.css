@@ -8,7 +8,7 @@ ul{
   list-style: none
 }
 a{color:black}
-a:hover{color:blue}
+a:hover{color:black}
 
 /*上部分*/
  #top{    
@@ -20,6 +20,9 @@ a:hover{color:blue}
  }
 
  /*输入框导航栏*/
+ .select{
+   cursor: pointer;
+ }
   #nav1{
         position:relative;
         width:40vw;

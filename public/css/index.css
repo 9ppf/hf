@@ -463,7 +463,11 @@
     color: #fff;
     text-align: center;
     line-height: 5vh;
-    transition: all  .2s  linear
+    transition: all  .2s  linear;
+    font-weight: bold;
+  }
+  .index_zhezhao>div>a{
+    color:white
   }
   .index_zhezhao>div:hover{
     background:#e22121e0;
@@ -516,6 +520,10 @@
     background: #5385b2;
     color: #fff;
     box-shadow: 2px 2px 2px #333;
+  }
+  .b1_zhezhao>div:last-child>a{
+    color:white;
+    font-weight: bold;
   }
   .b1:hover .b1_zhezhao{
     transform: translate(0vw,0px);
@@ -632,6 +640,12 @@
     }
     .index_zhezhao3:hover .c3_button{
       opacity: 1;
+    }
+    .c3_button>a{
+      color: white
+    }
+    .c3_button>a:hover{
+      color:white
     }
    .child3>.c_girl{
     border: 6px solid #9da9e169;
