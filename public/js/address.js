@@ -1,4 +1,4 @@
-// 二级菜单
+// 二级菜单及表单基本验证
 $(function() {
   $.ajax({
     url: "http://127.0.0.1:8080/user/city",
@@ -32,33 +32,6 @@ $(function() {
       })
     }
   })
-})
-
-
-function add_address() {
-  var uname = sessionStorage.getItem("uname");
-  var receiver = $("#receiver").val();
-  var cellphone = $("#cellphone").val();
-  var province = $("#province option:selected").val();
-  var city = $("#city option:selected").val();
-  var address = $("#address").val();
-  var fixedphone = $("#fixedphone").val();
-  var is_default = $("#is_default input:checked").next().html();
-  is_default == "是" ? is_default = 1 : is_default = 0;
-  var a =
-    console.log(province, city)
-  $.ajax({
-    url: "http://127.0.0.1:8080/user/address",
-    type: "post",
-    data: { uname, receiver, cellphone, province, city, address, fixedphone, is_default },
-    dataType: "json",
-    success: function(result) {
-      $("#res").html(result.msg)
-    }
-  })
-}
-
-$(function() {
   $(".add_form").on("blur", "input", function(event) {
     var target = $(event.target);
     var cla = target.context.className;
@@ -88,7 +61,6 @@ $(function() {
       }
     }
     if (cla == "dre") {
-      console.log(1)
       reg = /^[\u4e00-\u9fa5]{3,60}$/
       if (!target.val()) {
         target.next().css("color", "red").html("请输入详细地址")
@@ -101,15 +73,46 @@ $(function() {
       }
     }
   })
-})
-
-
-$(function() {
   $(".add_form").on("focus", "input", function(event) {
     var target = $(event.target);
     target.val("")
     target.next().html("")
-    target.parent().prev().html("")
-
+    $("#res").html("")
   })
-});
+})
+
+
+
+function add_address() {
+  var reg1 = /^[\u4e00-\u9fa5]{2,6}$/;
+  var reg2 = /^1[3-8][0-9]{9}$/;
+  var reg3 = /^[\u4e00-\u9fa5]{3,60}$/
+  var uname = sessionStorage.getItem("uname");
+  var receiver = $("#receiver").val();
+  var cellphone = $("#cellphone").val();
+  var province = $("#province option:selected").val();
+  var city = $("#city option:selected").val();
+  var address = $("#address").val();
+  var fixedphone = $("#fixedphone").val();
+  var is_default = $("#is_default input:checked").next().html();
+  is_default == "是" ? is_default = 1 : is_default = 0;
+  if (reg1.test(receiver) && reg2.test(cellphone) && reg2.test(fixedphone) && reg3.test(address)) {
+    $.ajax({
+      url: "http://127.0.0.1:8080/user/address",
+      type: "post",
+      data: { uname, receiver, cellphone, province, city, address, fixedphone, is_default },
+      dataType: "json",
+      success: function(result) {
+        if (result.msg == "收货地址添加成功") {
+          $("#res").css("color", "green")
+          $("#res").html(result.msg)
+          setTimeout(function() { $("#res").html("") }, 1000)
+        } else {
+          $("#res").html("修改失败")
+        }
+      }
+    })
+  } else {
+    $("#res").html("修改失败")
+  }
+}

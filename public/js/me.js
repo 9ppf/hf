@@ -19,7 +19,11 @@ function ne_update() {
         data: { uname, upwd, email, phone, user_name, birthday, uname_o },
         dataType: "json",
         success: function(result) {
-          console.log(result)
+          $("#tishi").html(result.msg)
+          if (result.msg == "修改成功") {
+            window.location.replace("index.html");
+            sessionStorage.setItem("uname", uname)
+          }
         }
       })
     }

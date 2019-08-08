@@ -7,7 +7,13 @@ function reg() {
   var phone = $.md5($("#phone").val());
   var user_name = $.md5($("#user_name").val());
   var birthday = $.md5($("#birthday").val());
-  if (!uname == "" && !upwd == "" && !email == "" && !phone == "" && !user_name == "" && !birthday == "") {
+  var $uname = /^[A-Za-z]{3,10}$/;
+  var $upwd = /^[0-9a-zA-z]{6,10}$/;
+  var $email = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+  var $mobilereg1 = /^1[3-8][0-9]{9}$/;
+  var $user_name = /^[\u4e00-\u9fa5]{2,6}$/
+  var $birthday = /^(1[0-2]|0?[1-9])-(0?[1-9]|[1-2][0-9]|3[0-1])$/
+  if ($uname.test($("#uname").val()) && $upwd.test($("#upwd").val()) && $email.test($("#email").val()) && $mobilereg1.test($("#phone").val()) && $user_name.test($("#user_name").val()) && $birthday.test($("#birthday").val())) {
     $.ajax({
       url: "http://127.0.0.1:8080/user/reg",
       type: "post",
