@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
+  <title>资料修改</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/me.css">
+</head>
+
+<body>
+  <div id="me">
+    <img src="../img/reg1.jpg" alt="">
+    <div id="me_tab">
+      <div class="title">
+        个人资料修改
+      </div>
+      <div id="tishi"></div>
+
+      <!-- 昵称 -->
+      <div>
+        <div>昵称:</div><input type="text" id="uname" placeholder="3~10英文字母" onblur="javascript:nicheng();" onfocus="javascript:nicheng();">
+      </div>
+      <!-- 昵称验证 -->
+      <div class="jingshi">
+        <div id="jingshi1"></div>
+      </div>
+
+      <!-- 密码 -->
+      <div>
+        <div>密码:</div><input type="password" id="upwd" placeholder="6~10位字母或数字" onblur="javascript:mima();" onfocus="javascript:mima();">
+      </div>
+      <!-- 密码验证 -->
+      <div class="jingshi">
+        <div id="jingshi2"></div>
+      </div>
+
+      <!-- 邮箱 -->
+      <div>
+        <div>邮箱:</div><input type="text" id="email" onfocus="javascript:youxiang();" onblur="javascript:youxiang();">
+      </div>
+      <!-- 邮箱验证 -->
+      <div class="jingshi">
+        <div id="jingshi3"></div>
+      </div>
+
+      <!-- 手机号 -->
+      <div>
+        <div>手机号:</div><input type="text" id="phone" onblur="javascript:mobil();" onfocus="javascript:mobil();">
+      </div>
+      <!-- 手机号验证 -->
+      <div class="jingshi">
+        <div id="jingshi4"></div>
+      </div>
+
+      <!--真实姓名 -->
+      <div>
+        <div>用户姓名:</div><input type="text" id="user_name" onblur="javascript:real_name();" onfocus="javascript:real_name();">
+      </div>
+      <!-- 真实姓名验证 -->
+      <div class="jingshi">
+        <div id="jingshi5"></div>
+      </div>
+
+      <!-- 生日 -->
+      <div>
+        <div>生日:</div><input type="text" id="birthday" placeholder="格式为：month-day" onblur="javascript:birth()" onfocus="javascript:birth()">
+      </div>
+      <!-- 生日验证 -->
+      <div class="jingshi">
+        <div id="jingshi6"></div>
+      </div>
+
+      <div><a href="address.html"> 添加新的收货地址</a></div>
+      <button onclick="javascript:ne_update()">修改</button>
+    </div>
+
+  </div>
+  <script src="../js/jquery-1.11.3.js"></script>
+  <script src="../js/md5.js"></script>
+  <script src="../js/me.js"></script>
+  <script src="../js/yanzheng.js"></script>
+</body>
+
+</html>

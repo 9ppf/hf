@@ -68,8 +68,7 @@ $(function() {
                             <div><a href="product_details.html?lid=6">查看详情</a></div>
                         </div>
                     </div>
-                </div>
-                        `
+                </div>`
           $(".lc_left1 .lc_big_photo").html($girl_top1s);
           $(".girl_details1").mouseenter(function() {
             $(this).parent().find(".girl_details1>.index_botton1")
@@ -126,7 +125,7 @@ $(function() {
         // 女装二楼
       $(function() {
           var $girl_bottom1 = `
-                        <div>
+                        <div class="g2_2">
                         <div class="g2">
                             <img src=${result[5].dSrc} class="rounded">
                                 <div>
@@ -142,7 +141,7 @@ $(function() {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="g2_2">
                         <div class="g2">
                             <img src=${result[6].dSrc} class="rounded">
                                 <div>
@@ -158,7 +157,7 @@ $(function() {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="g2_2">
                         <div class="g2">
                             <img src=${result[7].dSrc} class="rounded">
                                 <div>
@@ -174,7 +173,7 @@ $(function() {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="g2_2">
                         <div class="g2">
                             <img src=${result[8].dSrc} class="rounded">
                                 <div>

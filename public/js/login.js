@@ -39,18 +39,15 @@ function login() {
     dataType: "json",
     success: function(result) {
       var ts = $("#tishi")
-      if (result == 3) {
+      if (result.code == 3) {
         sessionStorage.setItem("uname", uname) //"uname"类似形参，uname类似实参
         ts.css("color", "green")
+        ts.html(result.msg);
         ts.html("即将跳转到首页")
         setTimeout(function() { window.location.replace("index.html"); }, 500)
       } else {
-        ts.css("color", "red")
-        ts.html("用户名或者密码不正确")
-        $("#uname").focus(function() {
-          ts.html("")
-        })
-        $("upwd").focus(function() {
+        ts.html(result.msg)
+        $("#uname,#upwd").focus(function() {
           ts.html("")
         })
       }

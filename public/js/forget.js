@@ -9,14 +9,11 @@ function forget() {
         data: { phone, upwd },
         dataType: "json",
         success: function(result) {
-          if (result == 1) {
-            $(".for_result").css("color", "green").html("修改成功")
-            setTimeout(function() {
-              $(".for_result").html("即将前往登录")
-            }, 500)
+          if (result.code == 1) {
+            $(".for_result").css("color", "green").html(result.msg)
             setTimeout(function() { window.location.replace("login.html"); }, 1000)
           } else {
-            $(".for_result").css("color", "red").html("该用户不存在")
+            $(".for_result").css("color", "red").html(result.msg)
           }
         }
       })

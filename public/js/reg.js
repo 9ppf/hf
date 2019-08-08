@@ -1,33 +1,35 @@
 function reg() {
+  var ts = $("#tishi");
+  ts.css("color", "red");
   var uname = $("#uname").val();
   var upwd = $.md5($("#upwd").val());
   var email = $.md5($("#email").val());
   var phone = $.md5($("#phone").val());
   var user_name = $.md5($("#user_name").val());
   var birthday = $.md5($("#birthday").val());
-  $.ajax({
-    url: "http://127.0.0.1:8080/user/reg",
-    type: "post",
-    data: { uname, upwd, email, phone, user_name, birthday },
-    dataType: "json",
-    success: function(result) {
-      var ts = $("#tishi")
-      if (result == 1) {
-        ts.css("color", "green")
-        ts.html("注册成功")
-        ts.html("即将前往登录")
-        setTimeout(function() { window.location.replace("login.html"); }, 500)
-      } else if (result == 2) {
-        ts.css("color", "red")
-        ts.html("该手机号已注册")
-      } else {
-        ts.css("color", "red")
-        ts.html("注册失败")
+  if (!uname == "" && !upwd == "" && !email == "" && !phone == "" && !user_name == "" && !birthday == "") {
+    $.ajax({
+      url: "http://127.0.0.1:8080/user/reg",
+      type: "post",
+      data: { uname, upwd, email, phone, user_name, birthday },
+      dataType: "json",
+      success: function(result) {
+        if (result.code == 1) {
+          ts.css("color", "green")
+          ts.html(result.msg)
+          ts.html("即将前往登录")
+          setTimeout(function() { window.location.replace("login.html"); }, 500)
+        } else {
+          ts.html(result.msg)
+        }
       }
-      $("#uname,#upwd,#email,#phone,#user_name,#birthday").focus(function() {
-        ts.html("");
-      })
-    }
+    })
+  } else {
+    console.log(1)
+    ts.html("注册失败");
+  }
+  $("#uname,#upwd,#email,#phone,#user_name,#birthday").focus(function() {
+    ts.html("");
   })
 }
 

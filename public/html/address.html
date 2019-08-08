@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
+  <title>收货地址</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/address.css">
+</head>
+
+<body>
+  <img src="../img/reg1.jpg" alt="" class="add_bg">
+  <div class="add_form">
+    <h2>收货地址</h2>
+    <div id="res"></div>
+    <div>
+      <div>收件人姓名</div>
+      <input type="text" id="receiver" class="rec">
+      <div class="tishi"></div>
+    </div>
+    <div>
+      <div>收件人电话 </div>
+      <input type="text" id="cellphone" class="cell">
+      <div class="tishi"></div>
+    </div>
+    <div>
+      <div>省</div>
+      <select name="provs" id="province">
+        <option>—请选择—</option><!--0-->
+        <option>北京市</option><!--1-->
+        <option>天津市</option>
+        <option>河北省</option>
+        <option>山西省</option>
+        <option>内蒙古自治区</option>
+        <option>辽宁省</option>
+        <option>吉林省</option>
+        <option>黑龙江省</option>
+        <option>上海市</option>
+        <option>江苏省</option>
+        <option>浙江省</option>
+        <option>安徽省</option>
+        <option>福建省</option>
+        <option>江西省</option>
+        <option>山东省</option>
+        <option>河南省</option>
+        <option>湖北省</option>
+        <option>湖南省</option>
+        <option>广东省</option>
+        <option>广西壮族自治区</option>
+        <option>海南省</option>
+        <option>重庆市</option>
+        <option>四川省</option>
+        <option>贵州省</option>
+        <option>云南省</option>
+        <option>西藏自治区</option>
+        <option>陕西省</option>
+        <option>甘肃省</option>
+        <option>青海省</option>
+        <option>宁夏回族自治区</option>
+        <option>新疆维吾尔自治区</option>
+        <option>香港特别行政区</option>
+        <option>澳门特别行政区</option>
+        <option>台湾省</option>
+      </select>
+    </div>
+    <div>
+      <div>市</div>
+      <select name="cities" id="city">
+      </select>
+    </div>
+    <div>
+      <div>详细地址</div>
+      <input type="text" id="address" class="dre">
+      <div class="tishi"></div>
+    </div>
+    <div>
+      <div>备用电话</div>
+      <input type="text" id="fixedphone" class="cell">
+      <div class="tishi"></div>
+    </div>
+    <div id="is_default">
+      <div>是否为默认收货地址</div>
+      <input type="radio" name="is_default" checked><span>是</span>
+      <input type="radio" name="is_default"><span>否</span>
+    </div>
+    <button onclick="javascript:add_address()">确定</button>
+  </div>
+  <script src="../js/jquery-1.11.3.js"></script>
+  <script src="../js/address.js"></script>
+</body>
+
+</html>

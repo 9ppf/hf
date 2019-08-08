@@ -1,0 +1,143 @@
+ body {
+   color: #d99f94;
+   font-family: "华文行楷";
+ }
+ 
+ .add_bg {
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   z-index: -2;
+ }
+ 
+ .add_form>h2 {
+   margin-left: 4vw;
+   font-size: 2vw;
+ }
+ 
+ .add_form {
+   position: absolute;
+   right: 11vh;
+   top: 15vh;
+   text-align: center;
+ }
+ 
+ .add_form>div {
+   height: 5vh;
+   display: flex;
+ }
+ 
+ .add_form>#res {
+   width: 54%;
+   margin-left: 40%;
+   height: 4vh;
+   color: red;
+   font-size: 1.2vw;
+   padding-top: .9vh;
+ }
+ 
+ .add_form>div>div:first-child,
+ .add_form>div>.is_default>div {
+   width: 17vw;
+   text-align: right;
+   font-weight: bold;
+   font-size: 1.2vw;
+   line-height: 4vh;
+   margin-right: 14px
+ }
+ 
+ .add_form>div>div:last-child {
+   color: red;
+   font-size: 1vw;
+   line-height: 4vh;
+   margin-left: 10px;
+   width: 8.5vw;
+ }
+ 
+ .add_form>div>input,
+ .add_form>div>select {
+   background: #EBD8C9;
+   height: 80%;
+   width: 16vw;
+   outline: none;
+   border: 3px solid #eac0aa;
+   box-shadow: 2px 1px 2px #eac0aa;
+   border-radius: 15px;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   padding-left: 2.5%;
+   font-size: 1vw;
+ }
+ 
+ .add_form>div>select {
+   -webkit-appearance: none;
+   appearance: none;
+ }
+ 
+ .add_form>div>select>option {
+   background: #ebd8c9 !important;
+ }
+ 
+ .add_form>div>#is_default {
+   display: flex
+ }
+ 
+ .add_form>#is_default>input {
+   visibility: hidden;
+   position: absolute
+ }
+ 
+ .add_form>#is_default>input:nth-child(2) {
+   left: 18vw
+ }
+ 
+ .add_form>#is_default>input:nth-child(4) {
+   left: 23vw
+ }
+ 
+ .add_form>#is_default>span:nth-child(3) {
+   position: absolute;
+   left: 20vw
+ }
+ 
+ .add_form>#is_default>span:nth-child(5) {
+   position: absolute;
+   left: 25vw
+ }
+ 
+ .add_form>#is_default>span {
+   bottom: 11.5vh;
+   font-size: 1.5rem;
+ }
+ 
+ .add_form>#is_default>input::after {
+   width: 1.8vw;
+   height: 3.7vh;
+   cursor: pointer;
+   content: " ";
+   background-image: linear-gradient(to bottom, #efdbda59, #fdaa9f, #efdbda59);
+   color: #fff;
+   display: inline-block;
+   visibility: visible;
+   border-radius: 7px;
+   border-radius: 50%
+ }
+ 
+ .add_form>#is_default>input:checked:after {
+   content: "✓";
+   font-size: 3vh;
+   color: #fff;
+   text-align: center;
+   line-height: 3.7vh;
+ }
+ 
+ .add_form button {
+   width: 11vw;
+   height: 5vh;
+   margin: 2.5vh 12.5vw;
+   background-color: #e8b7b738;
+   font-family: 华文行楷;
+   font-size: 3.5vh;
+   outline: none;
+   color: #d99f94;
+   border-radius: 20px;
+ }

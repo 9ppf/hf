@@ -1,62 +1,65 @@
 <!doctype html>
 <html lang="en">
- <head>
+
+<head>
   <meta charset="UTF-8">
   <meta name="Generator" content="EditPlus®">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
-	<meta name="Description" content="">
-	<link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
+  <meta name="Description" content="">
+  <link rel="Shortcut Icon" href="../icon/logo.png" type="image/x-icon" />
   <title>登录</title>
-    <link rel="stylesheet" href="../css/common.css">
-	  <link rel="stylesheet" href="../css/login.css">
- </head>
- <body> 
-	 <img src="../img/login1.jpg" alt="" id="lid" class="bg">
-	 <!-- 整个登录页面 -->
-	 <div class="login1">
-		 <!-- 标题 -->
-		 <div class="title">美丽汉服</div>
-		 <!-- 输入信息 -->			
-		<div class="shang">
-			<!-- 昵称-->
-			<div id="tishi"></div>
-			<div class="nicheng">
-				<div class="wenzi_1">昵称</div> 
-				<input type="text" class="shurukuang" id="uname" placeholder="不超过10个字" onblur="javascript:nicheng();" onfocus="javascript:nicheng();"><br>
-			</div>
-			<!-- 昵称验证	 -->
-			<div id="jingshi">
-			   <div id="jingshi1"></div>
-			</div>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
 
-			<!-- 密码 -->
-			<div class="mima">
-				<div class="wenzi_1">密码</div>
-				<input type="password" class="shurukuang" placeholder="由数字和字母组成，共8-10位" id="upwd" onblur="javascript:mima();" onfocus="javascript:mima();"><br>
-			</div>
-			<!-- 密码验证 -->
-			<div id="jingshi">
-			    <div id="jingshi2"></div>
-			</div>
-		</div>
-		<div id="ts"></div>
-		<!-- 登录时的功能 -->
-		<div class="zhong">
-			<input type="checkbox" class="check" onclick="rember()">
-			<p class="wenzi_2">记住密码</p>
-			<p class="wenzi_2" onclick="reg()">新用户注册</p>
-			<p class="wenzi_2" onclick="forget()">忘记密码?</p><br>
-		</div>
-		<!-- 登录按钮 -->
-		<button class="login2" onclick="login()">登录</button>
-	 </div>	
-	 <script src="../js/jquery-1.11.3.js"></script>
-	 <script src="../js/yanzheng.js"></script>
-	 <script src="../js/md5.js"></script>
-	 <script src="../js/login.js"></script>
-	 <script>
-		 window.onload=get()
-	 </script>
- </body>
+<body>
+  <img src="../img/login1.jpg" alt="" id="lid" class="bg">
+  <!-- 整个登录页面 -->
+  <div class="login1">
+    <!-- 标题 -->
+    <div class="title">美丽汉服</div>
+    <!-- 输入信息 -->
+    <div class="shang">
+      <!-- 昵称-->
+      <div id="tishi"></div>
+      <div class="nicheng">
+        <div class="wenzi_1">昵称</div>
+        <input type="text" class="shurukuang" id="uname" placeholder="不超过10个字" onblur="javascript:nicheng();" onfocus="javascript:nicheng();"><br>
+      </div>
+      <!-- 昵称验证	 -->
+      <div id="jingshi">
+        <div id="jingshi1"></div>
+      </div>
+
+      <!-- 密码 -->
+      <div class="mima">
+        <div class="wenzi_1">密码</div>
+        <input type="password" class="shurukuang" placeholder="由数字和字母组成，共8-10位" id="upwd" onblur="javascript:mima();" onfocus="javascript:mima();"><br>
+      </div>
+      <!-- 密码验证 -->
+      <div id="jingshi">
+        <div id="jingshi2"></div>
+      </div>
+    </div>
+    <div id="ts"></div>
+    <!-- 登录时的功能 -->
+    <div class="zhong">
+      <input type="checkbox" class="check" onclick="rember()">
+      <p class="wenzi_2">记住密码</p>
+      <p class="wenzi_2" onclick="reg()">新用户注册</p>
+      <p class="wenzi_2" onclick="forget()">忘记密码?</p><br>
+    </div>
+    <!-- 登录按钮 -->
+    <button class="login2" onclick="login()">登录</button>
+  </div>
+  <script src="../js/jquery-1.11.3.js"></script>
+  <script src="../js/yanzheng.js"></script>
+  <script src="../js/md5.js"></script>
+  <script src="../js/login.js"></script>
+  <script>
+    window.onload = get()
+  </script>
+</body>
+
 </html>
