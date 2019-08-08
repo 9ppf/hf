@@ -32,7 +32,7 @@ router.post('/reg', function(req, res) {
           pool.query(sql, [reg.phone], function(err, result) {
             if (err) throw err;
             if (result.length > 0) {
-              res.send({ code: "2", msg: "用户注册过" }); //用户注册过
+              res.send({ code: "2", msg: "手机号注册过" }); //用户注册过
               return;
             } else {
               //把数据插入到数据库
@@ -112,14 +112,28 @@ router.post('/forget', function(req, res) {
   })
 })
 
-//4 订单详情
-router.get('/buy', function(req, res) {
-  var sql = 'SELECT * FROM hanfu_receiver_adderss WHERE uname=?'
-  pool.query(sql, [req.query.uname], function(err, result) {
+//4.用户修改
+router.post('/update', function(req, res) {
+  //验证数据是否为空
+  //批量验证 遍历对象中的属性，如果属性值为空，提示属性名这一项是必须的，
+  var obj = req.body;
+  if (!obj.uname) { res.send({ code: "1", msg: "昵称为空" }); return }
+  if (!obj.upwd) { res.send({ code: "2", msg: "密码为空" }); return }
+  if (!obj.email) { res.send({ code: "3", msg: "邮箱为空" }); return }
+  if (!obj.phone) { res.send({ code: "4", msg: "手机号为空" }); return }
+  if (!obj.user_name) { res.send({ code: "5", msg: "真实姓名为空" }); return }
+  if (!obj.birthday) { res.send({ code: "6", msg: "生日为空" }); return }
+  //执行sql语句，修改编号对应的数据
+  pool.query('UPDATE hanfu_user SET uname=?,upwd=?,email=?,phone=?,user_name=?,birthday=? WHERE uname=?', [obj.uname, obj.upwd, obj.email, obj.phone, obj.user_name, obj.birthday, obj.uname_o], function(err, result) {
     if (err) throw err;
-    res.send(result)
-  })
-})
+    if (result.affectedRows > 0) {
+      res.send({ code: 200, msg: '修改成功' });
+    } else {
+      res.send({ code: 200, msg: '不存在用户' });
+    }
+  });
+});
+
 
 //5、收货地址
 router.post("/address", function(req, res) {
@@ -148,6 +162,14 @@ router.get("/city", function(res, res) {
   })
 })
 
+//7 订单详情
+router.get('/buy', function(req, res) {
+  var sql = 'SELECT * FROM hanfu_receiver_adderss WHERE uname=?'
+  pool.query(sql, [req.query.uname], function(err, result) {
+    if (err) throw err;
+    res.send(result)
+  })
+})
 
 //4、用户检索
 router.get('/detail', function(req, res) {
@@ -166,29 +188,6 @@ router.get('/detail', function(req, res) {
   });
 });
 
-
-
-//4.用户修改
-router.post('/update', function(req, res) {
-  //验证数据是否为空
-  //批量验证 遍历对象中的属性，如果属性值为空，提示属性名这一项是必须的，
-  var obj = req.body;
-  if (!obj.uname) { res.send({ code: "1", msg: "昵称为空" }); return }
-  if (!obj.upwd) { res.send({ code: "2", msg: "密码为空" }); return }
-  if (!obj.email) { res.send({ code: "3", msg: "邮箱为空" }); return }
-  if (!obj.phone) { res.send({ code: "4", msg: "手机号为空" }); return }
-  if (!obj.user_name) { res.send({ code: "5", msg: "真实姓名为空" }); return }
-  if (!obj.birthday) { res.send({ code: "6", msg: "生日为空" }); return }
-  //执行sql语句，修改编号对应的数据
-  pool.query('UPDATE hanfu_user SET uname=?,upwd=?,email=?,phone=?,user_name=?,birthday=? WHERE uname=?', [obj.uname, obj.upwd, obj.email, obj.phone, obj.user_name, obj.birthday, obj.uname_o], function(err, result) {
-    if (err) throw err;
-    if (result.affectedRows > 0) {
-      res.send({ code: 200, msg: '修改成功' });
-    } else {
-      res.send({ code: 200, msg: '修改失败' });
-    }
-  });
-});
 
 //5、用户列表
 router.get('/list', function(req, res) {
