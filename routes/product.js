@@ -17,14 +17,12 @@ router.get('/carousel', (req, res) => {
 
 // 首页商品
 router.get('/index', (req, res) => {
-    // var $details = req.query.lid;
-    // console.log($details)
     var sql = "SELECT * FROM hanfu_index_product";
     pool.query(sql, [], (err, result) => {
       if (err) throw err;
       res.send(result);
     })
-  }) //测试能不能用http://127.0.0.1:8080/index或者http://localhost:8080/index
+  }) //测试能不能用http://127.0.0.1:8080/product/index或者http://localhost:8080/product/index
 
 // 商品详情页
 router.get('/details', (req, res) => {
@@ -77,12 +75,27 @@ router.get("/detailsImg", (req, res) => {
 // 搜索功能v
 var $term = "汉服"
 router.get("/select", (req, res) => {
-    var sql = `SELECT * FROM hanfu_product_list WHERE title LIKE ${$term}`;
-    pool.query(sql, [], (err, result) => {
-      if (err) throw err;
+  var sql = `SELECT * FROM hanfu_product_list WHERE title LIKE ${$term}`;
+  pool.query(sql, [], (err, result) => {
+    if (err) throw err;
 
-      res.send(result);
-    })
+    res.send(result);
+  })
+})
+
+//购物车
+router.get("/cart", (req, res) => {
+  var uid = req.query.uid;
+  var sql = "SELECT * FROM hanfu_shopping_cart WHERE uid=?";
+  pool.query(sql, [uid], (err, result) => {
+    if (err) throw err;
+    res.send(result)
+  })
+})
+
+// 用户购物车
+router.get("/addcart", function(req, res) {
+    console.log(req.session)
   })
   // 导出路由
 module.exports = router;
