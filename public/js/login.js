@@ -38,9 +38,11 @@ function login() {
     data: { uname, upwd },
     dataType: "json",
     success: function(result) {
+      var uid = result.uid;
       var ts = $("#tishi")
       if (result.code == 3) {
         sessionStorage.setItem("uname", uname) //"uname"类似形参，uname类似实参
+        sessionStorage.setItem("uid", uid)
         ts.css("color", "green")
         ts.html(result.msg);
         ts.html("即将跳转到首页")

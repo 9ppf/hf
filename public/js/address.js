@@ -88,6 +88,7 @@ function add_address() {
   var reg2 = /^1[3-8][0-9]{9}$/;
   var reg3 = /^[\u4e00-\u9fa5]{3,60}$/
   var uname = sessionStorage.getItem("uname");
+  var uid = sessionStorage.getItem("uid");
   var receiver = $("#receiver").val();
   var cellphone = $("#cellphone").val();
   var province = $("#province option:selected").val();
@@ -100,7 +101,7 @@ function add_address() {
     $.ajax({
       url: "http://127.0.0.1:8080/user/address",
       type: "post",
-      data: { uname, receiver, cellphone, province, city, address, fixedphone, is_default },
+      data: { uname, uid, receiver, cellphone, province, city, address, fixedphone, is_default },
       dataType: "json",
       success: function(result) {
         if (result.msg == "收货地址添加成功") {
