@@ -76,7 +76,8 @@ router.post("/login", function(req, res) {
       pool.query(sql2, [$uname, $upwd], function(err, result) {
         if (err) throw err;
         if (result.length > 0) {
-          res.send({ code: "3", msg: "登陆成功" }); //登陆成功
+          console.log(result[0].uid)
+          res.send({ code: "3", msg: "登陆成功", uid: `${result[0].uid}` }); //登陆成功
         } else {
           res.send({ code: "4", msg: "密码错误" }); //密码错误
         }
@@ -140,6 +141,7 @@ router.post("/address", function(req, res) {
   var addresss = req.body;
   var sql = 'INSERT INTO hanfu_receiver_adderss SET ?'
   if (!addresss.uname) { res.send({ code: "1", msg: "请先登录" }); return }
+  if (!addresss.uid) { res.send({ code: "9", msg: "请先登录" }); return }
   if (!addresss.receiver) { res.send({ code: "2", msg: "接收人姓名为空" }); return; };
   if (!addresss.cellphone) { res.send({ code: "3", msg: "接收人手机号为空" }); return; };
   if (!addresss.province) { res.send({ code: "4", msg: "请选择省份" }); return; };
